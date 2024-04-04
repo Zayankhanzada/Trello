@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="/assets/images/trello.svg">
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--font faimly-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Font-awesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Swiper CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <title>Manage Your Teams | Trello</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!--Logo-->
+            <a class="d-flex align-items-center p-3" href="#">
+                <svg aria-label="Atlassian Trello" height="40" role="img" viewBox="0 0 312 105"
+                    width="111.42857142857143" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" class="Logo-sc-1anfgcw-0 gguOta">
+                    <linearGradient id="trello-logo-gradient-defaultMJFtCCgVhXrVl7v9HA7EH" x1="49.992%" x2="49.992%"
+                        y1="100%" y2=".016%">
+                        <stop offset="0" stop-color="#0052cc"></stop>
+                        <stop offset="1" stop-color="#2684ff"></stop>
+                    </linearGradient>
+                    <path
+                        d="m55.3 40.6h-47.5c-4.1 0-7.4 3.3-7.4 7.4v47.6c0 4.1 3.3 7.4 7.4 7.4h47.5c4.1 0 7.4-3.3 7.4-7.4v-47.6c0-4.1-3.3-7.4-7.4-7.4zm-28.1 44.9c0 1.4-1.1 2.5-2.5 2.5h-10.4c-1.4 0-2.5-1.1-2.5-2.5v-30.9c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5zm24-14.2c0 1.4-1.1 2.5-2.4 2.5h-10.5c-1.4 0-2.5-1.1-2.5-2.5v-16.7c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5z"
+                        fill="url(#trello-logo-gradient-defaultMJFtCCgVhXrVl7v9HA7EH)"></path>
+                    <g fill="#253858" transform="translate(87 40)">
+                        <path d="m42.6 5.2v12.1h-14.3v45.7h-13.8v-45.8h-14.3v-12z"></path>
+                        <path d="m60.2 63h-12.7v-45h12.7v8.6c2.4-6.1 6.3-9.7 13.2-9.2v13.3c-9-.7-13.2 1.5-13.2 8.7z">
+                        </path>
+                        <path
+                            d="m143 63.4c-8.4 0-13.6-4-13.6-13.5v-49.3h12.8v47.5c0 2.7 1.8 3.7 4 3.7.6 0 1.3 0 1.9-.1v11.1c-1.7.4-3.4.6-5.1.6z">
+                        </path>
+                        <path
+                            d="m169.8 63.4c-8.4 0-13.6-4-13.6-13.5v-49.3h12.8v47.5c0 2.7 1.8 3.7 4 3.7.6 0 1.3 0 1.9-.1v11.1c-1.7.4-3.4.6-5.1.6z">
+                        </path>
+                        <path
+                            d="m181 40.5c0-13.9 8-23.4 21.8-23.4s21.6 9.5 21.6 23.4-7.9 23.6-21.6 23.6-21.8-9.8-21.8-23.6zm12.5 0c0 6.8 2.8 12.1 9.3 12.1s9.1-5.4 9.1-12.1-2.8-12-9.1-12-9.3 5.2-9.3 12z">
+                        </path>
+                        <path
+                            d="m90.6 44.6c3.6.4 7.2.6 10.7.6 9.8 0 18-2.6 18-12.1 0-9.2-8.5-16.1-18.7-16.1-13.7 0-22.5 10-22.5 23.8 0 14.4 7.6 23 24.7 23 5.1.1 10.1-.8 14.9-2.6v-10.8c-4.4 1.4-9.4 2.8-14.4 2.8-6.8.1-11.5-2.2-12.7-8.6zm9.8-17.7c3.6 0 6.5 2.4 6.5 5.8 0 4.3-4.6 5.7-9.8 5.7-2.2 0-4.5-.2-6.7-.5.2-2.1.8-4.1 1.8-6 1.6-3.1 4.8-5 8.2-5z">
+                        </path>
+                    </g>
+                    <g fill="#0052cc" transform="translate(94)">
+                        <path
+                            d="m98.9 16.7c0-4-2.6-5.8-7.4-7-3-.8-3.7-1.4-3.7-2.4 0-1.2 1.1-1.8 3.1-1.8 2.4.1 4.8.7 7 1.8v-5c-2.1-1-4.5-1.5-6.8-1.5-5.3 0-8.2 2.5-8.2 6.6 0 3.9 2.6 5.9 7 6.9 3.1.7 4 1.2 4 2.5 0 1-.7 1.8-3 1.8-2.8-.1-5.6-.9-8.1-2.3v5.3c2.5 1.2 5.2 1.9 8 1.9 5.4 0 8.1-2.7 8.1-6.8z">
+                        </path>
+                        <path d="m159.3 1.2v22h4.7v-16.8l2 4.4 6.6 12.3h5.9v-22h-4.7v14.2l-1.8-4.1-5.3-10.1h-7.4z">
+                        </path>
+                        <path d="m129.6 1.2h-5.1v22h5.1z"></path>
+                        <path d="m43.2 1.2v22h10.5l1.6-4.8h-7v-17.2z"></path>
+                        <path d="m22.4 1.2v4.8h5.7v17.2h5.1v-17.2h6.1v-4.8z"></path>
+                        <path
+                            d="m15 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.4 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.8.4-2.8.4z">
+                        </path>
+                        <path
+                            d="m71.7 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.3 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.9.4-2.8.4z">
+                        </path>
+                        <path
+                            d="m148 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.4 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.8.4-2.8.4z">
+                        </path>
+                        <path
+                            d="m119.2 16.7c0-4-2.6-5.8-7.4-7-3-.8-3.7-1.4-3.7-2.4 0-1.2 1.1-1.8 3-1.8 2.4.1 4.8.7 7 1.8v-5c-2.2-1-4.5-1.5-6.9-1.5-5.3 0-8.2 2.5-8.2 6.6 0 3.9 2.6 5.9 7 6.9 3.1.7 4 1.2 4 2.5 0 1-.7 1.8-3 1.8-2.8-.1-5.6-.9-8.1-2.3v5.3c2.5 1.2 5.2 1.9 8 1.9 5.7 0 8.3-2.7 8.3-6.8z">
+                        </path>
+                    </g>
+                </svg>
+            </a>
+            <!--toogle Button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                        Features
+                    </a>
+                
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                        Solutions
+                    </a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                        Plans
+                    </a>
+    
+                 <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                        Resources
+                    </a>
+                </ul>
+                    <!-- toggle buttons -->
+                    <div class="nav-button d-lg-none text-center"> <!-- Hide on larger screens -->
+                        <a class="btn bg-transparent">Log in</a>
+                        <a class="btn btn-primary">Get Trello for free</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Buttons for larger screens -->
+            <div class="nav-button d-none d-lg-flex"> <!-- Hide on smaller screens -->
+                <a class="btn bg-transparent">Log in</a>
+                <a class="btn btn-primary ">Get Trello for free</a>
+            </div>
+
+        </div>
+    </nav>
+    <!--Headline section-->
+    <section class="head-line section pt-6">
+        <div class="row flex-lg-column">
+            <div class="col-12">
+                <div class="bg-lightblue p-3">
+                    <h6 class="fs-6 text-center pt-2">Accelerate your
+                        teams' work with Atlassian Intelligence (AI) features 🤖 now in beta!
+                        <a href="">Learn more.</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero-section ">
+        <div class="container py-9">
+            <div class="row flex-column flex-md-row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <h1 class="">
+                        Trello brings all your tasks, teammates, and tools together</h1>
+                    <p class="fs-20 mt-3 ">Keep everything in the
+                        same place—even if your team isn’t.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row flex-wrap  mt-5 gap-3">
+                        <input type="email" name="email" placeholder="Email">
+                        <button class="btn btn-primary"> Sign up - Its free </button>
+                    </div>
+                    <div class="d-block text-center text-lg-start  py-9 ">
+                    <a class=" text-white" href="">
+                        <h6> Watch vedio <i class="bi bi-play-circle"></i></h6>
+                    </a>
+                </div>
+                </div>
+                <div class="col-12 col-lg-6 ">
+                    <div class="d-flex position-relative mt-4 ">
+                        <img src="/assets/images/hero-section.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- productivity-section -->
+    <section class="productivity-section">
+        <div class="container py-9">
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="fw-medium">TRELLO 101</h6>
+                    <h2 class="mt-3">A productivity powerhouse</h2>
+                    <div class="col-12 col-lg-7">
+                        <p class="mt-4 fs-20 fw-semi-bold">
+                            Simple, flexible, and powerful.
+                            All it takes are boards, lists, and cards to get a
+                            clear view of who’s doing what and what needs to get done.
+                            Learn more in our <a href=""> guide for getting started.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-column-reverse flex-lg-row thumbnails pt-6">
+                <div class="col-12 col-lg-3">
+                    <div class="box active mt-3" onclick="showThumbnail(0) ,toggleActive(this)">
+                        <h6 class="fw-500">Boards</h6>
+                        <p class="mt-2">Trello boards keep tasks organized and work moving forward. In a glance, see
+                            everything from “things to do” to “aww yeah, we did it!”</p>
+                    </div>
+                    <div class="box mt-2" onclick="showThumbnail(1),toggleActive(this)">
+                        <h6 class="fw-500">Lists</h6>
+                        <p class="mt-2">The different stages of a task. Start as simple as To Do, Doing or Done—or build
+                            a workflow custom fit to your team’s needs. There’s no wrong way to Trello.</p>
+                    </div>
+                    <div class="box mt-2" onclick="showThumbnail(2),toggleActive(this)">
+                        <h6 class="fw-500">Cards</h6>
+                        <p class="mt-2">Cards represent tasks and ideas and hold all the information to get the job
+                            done. As you make progress, move cards across lists to show their status.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-9 ">
+                    <div class="Thumbnails">
+                        <div class="image-wrapper">
+                            <img src="/assets/images/Carousel_Image1.webp" alt="Thumbnail 1" class="image-fluid">
+                            <img src="/assets/images/Carousel_Image2.webp" alt="Thumbnail 2" class="d-none image-fluid">
+                            <img src="/assets/images/Carousel_Image3.webp" alt="Thumbnail 3" class="d-none image-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Workflow section-->
+    <section class="workflow-section">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col">
+                    <h6 class="fw-500">TRELLO IN ACTION</h6>
+                    <h2 class="mt-3">Workflows for any project, big or small</h2>
+                </div>
+            </div>
+            <!--swiper-->
+            <div class="swiper-container firstswiper">
+                <div class="d-flex justify-content-end mt-5 ">
+                    <button class="swiper-button previous"> <i class="bi bi-caret-left"></i> </button>
+                    <button class="swiper-button next"><i class="bi bi-caret-right"></i> </button>
+                </div>
+                <div class="swiper-wrapper mt-3">
+                    <div class="swiper-slide d-flex">
+                        <div class="card project-border">
+                            <div class="icons">
+                                <img src="/assets/images/folder icon.png" alt="">
+                            </div>
+                            <h3 class="mt-2">Project Managment</h3>
+                            <p class="text-seceondary mt-3">Keep tasks in order, deadlines on track, and team members
+                                aligned with Trello.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex">
+                        <div class="card meeting-border">
+                            <div class="icons">
+                                <img src="/assets/images/megaphone icon.png" alt="meeing icon">
+                            </div>
+                            <h3 class="mt-2">Meetings</h3>
+                            <p class="text-seceondary mt-3">Empower your team meetings to be more productive,
+                                empowering, and dare we say—fun.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex">
+                        <div class="card onboarding-border">
+                            <div class="icons">
+                                <img src="/assets/images/Leaf icon.png" alt="">
+                            </div>
+                            <h3 class="mt-2">Onboarding</h3>
+                            <p class="text-seceondary  mt-3">Onboarding to a new company or project is a snap with
+                                Trello’s visual layout of to-do’s, resources, and progress tracking.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex">
+                        <div class="card task-border">
+                            <div class="icons">
+                                <img src="/assets/images/checklist-icon.png" alt="">
+                            </div>
+                            <h3 class="mt-2">Task Managment</h3>
+                            <p class="text-seceondary mt-3">Use Trello to track, manage, complete, and bring tasks
+                                together team’s projects a cohesive success every time.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex">
+                        <div class="card brainstorming-border">
+                            <div class="icons">
+                                <img src="/assets/images/brain-icon.svg" alt="">
+                            </div>
+                            <h3 class="mt-3">Brainstorming</h3>
+                            <p class="text-seceondary mt-3">Unleash your team’s creativity and keep ideas visible,
+                                collaborative, and actionable.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex">
+                        <div class="card resources-border">
+                            <div class="icons">
+                                <img src="/assets/images/book-icon.png" alt="">
+                            </div>
+                            <h3 class="mt-2">Resource Hub</h3>
+                            <p class="text-seceondary mt-3">Use Trello to track, manage, complete, and bring
+                                tasks together like the pieces of a puzzle, and make your team’s projects a cohesive
+                                success every time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination d-flex justify-content-center position-relative d-md-none  mt-3">
+                    <div class="progressbar">
+                        <input type="range" name="" id="progressbar">
+                    </div>
+                </div>
+                <div class="row flex-row pt-6 gap-3 ">
+                    <div class="col-12 col-lg-9">
+                        <h4 class="fs-20">No need to start from scratch. Jump-start your workflow with a proven playbook
+                            designed for different teams. Customize it to make it yours.</h4>
+                    </div>
+                    <div class="col">
+                        <a class=" btn btn-seceondary ">Explore all the use cases </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- work-section -->
+    <section class="work-section">
+        <div class="container pt-6">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-white text-center mt-5">See work in a whole new way</h2>
+                    <p class="fs-20 text-white text-center mt-2">View your team’s projects from every angle and bring a
+                        fresh perspective to the task at hand.</p>
+                    <div class=" d-flex justify-content-center">
+                        <a href="" class="btn btn-light mt-4">Discover all Trello views</a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="card row flex-lg-row-reverse flex-column-reverse justify-content-center align-items-center mt-5 mb-13">
+                <div class="col-12 col-lg-5">
+                    <h3 class="fs-6 fw-semibold mt-3"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"
+                            width="24" height="24">
+                            <path
+                                d="M6 5.333h9.333a3.333 3.333 0 0 1 0 6.667H6a3.333 3.333 0 0 1 0-6.667Zm9.333 4a.667.667 0 0 0 0-1.333H6a.667.667 0 0 0 0 1.333h9.333Zm-6.666 4H18A3.333 3.333 0 1 1 18 20H8.667a3.333 3.333 0 0 1 0-6.667Zm9.333 4A.667.667 0 0 0 18 16H8.667a.667.667 0 0 0 0 1.333H18Zm6.667 4h-9.334a3.333 3.333 0 1 0 0 6.667h9.334a3.333 3.333 0 0 0 0-6.667Zm-9.334 4a.667.667 0 0 1 0-1.333h9.334a.667.667 0 1 1 0 1.333h-9.334Zm8-20H26A3.333 3.333 0 1 1 26 12h-2.667a3.333 3.333 0 1 1 0-6.667Zm2.667 4A.667.667 0 1 0 26 8h-2.667a.667.667 0 1 0 0 1.333H26Z">
+                            </path>
+                        </svg>
+                        HIT DEADLINES EVERY TIME</h3>
+                    <p class=" fs-20 mt-4">
+                        From weekly sprints to annual planning, Timeline view keeps all tasks on track. Quickly get a
+                        glimpse of what’s coming down
+                        the pipeline and identify any gaps that might impede your team’s progress
+                    </p>
+                    <a class="mt-5 fs-20">Learn more about Timeline view</a>
+                </div>
+                <div class="col-12  col-lg-7 text-lg-center">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/work-section1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--Seceond card-->
+            <div class="card row flex-column-reverse flex-lg-row justify-content-center align-items-center pt-6">
+                <div class="col-12  col-lg-5">
+                    <h3 class="fs-6 fw-semibold mt-4">
+                        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 32 32" width="24" height="24">
+                            <path
+                                d="M6.66 6.667h18.68A2.66 2.66 0 0 1 28 9.325v16.016A2.659 2.659 0 0 1 25.34 28H6.66A2.66 2.66 0 0 1 4 25.341V9.325a2.659 2.659 0 0 1 2.66-2.658ZM6.667 12v12A1.333 1.333 0 0 0 8 25.333h16A1.333 1.333 0 0 0 25.333 24V12H6.667ZM8 5.333a1.333 1.333 0 0 1 2.667 0v1.334H8V5.333Zm13.333 0a1.333 1.333 0 0 1 2.667 0v1.334h-2.667V5.333Zm-12 12v-2.668H12v2.668H9.333Zm10.667 0v-2.668h2.667v2.668H20Zm-5.333 0v-2.668h2.668v2.668h-2.668Zm-5.334 5.334V20H12v2.667H9.333Zm5.334 0V20h2.668v2.667h-2.668Zm5.333 0V20h2.667v2.667H20Z">
+                            </path>
+                        </svg>
+                        STAY ON TOP OF TASKS
+                    </h3>
+                    <p class="fs-20 mt-4">
+                        Start each day without any surprises. Whether scheduling an editorial calendar or staying on top
+                        of to-dos, Calendar view
+                        is like a crystal ball giving you a clear vision of what work lies ahead.
+                    </p>
+                    <a class="fs-20 mt-4">Learn more about calender view</a>
+                </div>
+                <div class="col-12 col-lg-7 text-lg-center">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/work-section2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <!-- feature section -->
+    <section class="feature-section">
+        <div class="container py-9">
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <h6 class="fw-500">POWERFUL WAYS TO GROW</h6>
+                    <h2 class="mt-3">Do more with Trello</h2>
+                    <p class="fs-20 mt-3">Trello’s intuitive features give any team the
+                        ability to quickly set up and customize workflows for just about anything.</p>
+                </div>
+            </div>
+
+
+            <div class="row row-cols-1 justify-content-center row-cols-md-2 row-cols-lg-3 mt-5">
+                <div class="col  mb-3 mb-md-4 ">
+                    <div class="card p-3 p-sm-4">
+                        <div class="d-flex align-items-center">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/Integrations_Puzzle.svg" alt="Integreation">
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="mt-3 fw-semi-bold">Integreations</h4>
+                            <p class="mt-3">
+                                Connect the apps your team already uses into
+                                your Trello workflow or add a Power-Up to
+                                fine-tune your specific needs.
+                            </p>
+                        </div>
+                        <div>
+                            <a class="btn btn-seceondary mt-4">Browse Integreations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3 mb-md-4 mb-lg-0">
+                    <div class="card p-3 p-sm-4">
+                        <div class="d-flex align-items-center">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/automation-feature.svg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="mt-3 fw-semi-bold">Buttler Automation</h4>
+                            <p class="mt-3">
+                                No-code automation is built into every Trello board.
+                                Focus on the work that matters most and let the robots do the rest.
+                            </p>
+                        </div>
+                        <div>
+                            <a class="btn btn-seceondary mt-4">Get to Know Automation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3 mb-md-4 ">
+                    <div class="card p-3  p-sm-4">
+                        <div class="d-flex align-items-center">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/Search-feature.svg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="mt-3">Trello Enterprise</h4>
+                            <p class=" mt-3">
+                                The productivity tool
+                                teams love, paired with the features and security needed for scale.</p>
+                        </div>
+                        <div>
+                            <a class="btn btn-seceondary mt-5">Explore Enterprise</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- feedback section -->
+    <section class="feedback-section">
+        <div class="container py-4 ">
+            <div class="swiper-container seceond-swiper">
+
+                <!--navigation-->
+                <div class="d-flex justify-content-end">
+                    <button class="swiper-button previous">
+                        <i class="bi bi-caret-left"></i> </button>
+                    <button class="swiper-button next"> <i class="bi bi-caret-right"></i> </button>
+                </div>
+                <div class="swiper-wrapper mt-4">
+                    <!--First box-->
+                    <div class="swiper-slide">
+                        <div class="col-12"><!--for parent col-->
+                            <div class="box d-flex flex-md-row flex-column">
+                                <div class="box-image">
+                                    <div class="col-12"><!--for image text portion col-->
+                                        <h4 class="">[Trello is] great for simplifying complex processes. As a
+                                            manager, I can chunk [processes] down
+                                            into bite-sized pieces for my team and then delegate that out, but still
+                                            keep a bird's-eye view.
+                                        </h4>
+                                    </div>
+                                    <div class="line"></div>
+                                    <p class="mt-3">Joey Rosenberg</p>
+                                    <p>Global Leadership Director at Women Who Code</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <img src="/assets/images/WomenWhoCode_logo.svg" alt="WomenWhoCode_logo">
+                                        <a href="" class="">Read the story</a>
+                                    </div>
+                                </div>
+                                <div class=" box-color ">
+                                    <div class="col-12">
+                                        <h2 class="text-white fs-32">75% of organizations report that
+                                            Trello delivers value to their business within 30 days.</h2>
+                                        <div class="mt-16">
+                                            <a href="" class="text-white ">Trello Tech Validate Survey</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!--swiper slide-->
+                    <!--Seceond box-->
+                    <div class="swiper-slide">
+                        <div class="col-12"><!--for parent col-->
+                            <div class="box d-flex flex-md-row flex-column">
+                                <div class="box-image">
+                                    <div class="col-12"><!--for image portion col-->
+                                        <h4 class="">[Trello is] great for simplifying complex processes. As a
+                                            manager, I can chunk [processes] down
+                                            into bite-sized pieces for my team and then delegate that out, but still
+                                            keep a bird's-eye view.
+                                        </h4>
+                                    </div>
+                                    <div class="line"></div>
+                                    <p class="mt-3">Joey Rosenberg</p>
+                                    <p>Global Leadership Director at Women Who Code</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <img src="/assets/images/WomenWhoCode_logo.svg" alt="WomenWhoCode_logo">
+                                        <a href="" class="">Read the story</a>
+                                    </div>
+                                </div>
+                                <div class=" box-color ">
+                                    <div class="col-12">
+                                        <h2 class="text-white fs-32">75% of organizations report that
+                                            Trello delivers value to their business within 30 days.</h2>
+                                        <div class="mt-16">
+                                            <a href="" class="text-white ">Trello Tech Validate Survey</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/swiper slide-->
+                    <!--Third box-->
+                    <div class="swiper-slide">
+                        <div class="col-12"><!--for parent col-->
+                            <div class="box d-flex flex-md-row flex-column">
+                                <div class="box-image">
+                                    <div class="col-12"><!--for image portion col-->
+                                        <h4 class="">[Trello is] great for simplifying complex processes. As a
+                                            manager, I can chunk [processes] down
+                                            into bite-sized pieces for my team and then delegate that out, but still
+                                            keep a bird's-eye view.
+                                        </h4>
+                                    </div>
+                                    <div class="line"></div>
+                                    <p class="mt-3">Joey Rosenberg</p>
+                                    <p>Global Leadership Director at Women Who Code</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <img src="/assets/images/WomenWhoCode_logo.svg" alt="WomenWhoCode_logo">
+                                        <a href="" class="">Read the story</a>
+                                    </div>
+                                </div>
+                                <div class=" box-color ">
+                                    <div class="col-12">
+                                        <h2 class="text-white fs-32">75% of organizations report that
+                                            Trello delivers value to their business within 30 days.</h2>
+                                        <div class="mt-16">
+                                            <a href="" class="text-white ">Trello Tech Validate Survey</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/swiper slide-->
+
+                </div><!--swiper wrapper-->
+            </div><!--swiper container-->
+        </div>
+    </section>
+    <!--Price section-->
+    <div class="container-fluid py-5 bg-lightblue">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class=" mt-5">Trello priced your way</h2>
+                <h5 class=" text-secondary mt-2 ">Trusted by millions, Trello powers teams all around the world.</h5>
+                <a ref="" class="btn btn-primary mt-4">Compare Plans</a>
+            </div>
+        </div>
+    </div><!--/container-->
+    <!--Price card section-->
+    <section class="price-cards-section">
+        <div class="container py-5">
+            <div class="row">
+                <!--First card-->
+                <div class="col-12 col-lg-3">
+                    <div class="card">
+                        <div class="col">
+                            <h6 class="fw-semibold">Free</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-48"> 0 </span> USD</h4>
+                            <h6 class="fs-15">Free for your whole team</h6>
+                            <div class="card-body">
+                                <p class="pt-6">For indiviuals or Teams looking to organize any project</p>
+                            </div>
+                            <div class="card-button pt-6">
+                                <a href="" class="btn btn-seceondary ">Get started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Seceond card-->
+                <div class="col-12 col-lg-3">
+                    <div class="card">
+                        <div class="col">
+                            <h6 class="fw-semibold">Standard</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-48"> 5 </span> USD</h4>
+                            <h6 class="fs-15">Per user/month if billed annually ($6 billed monthly)</h6>
+                            <div class="card-body">
+                                <p class="pt-5">For small teams that need to manage work and scale collaboration.</p>
+                            </div>
+                            <div class="card-button mt-5">
+                                <a href="" class="btn btn-seceondary">Sign up now</a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="" class="">Learn more about Standard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--third card-->
+                <div class="col-12 col-lg-3">
+                    <div class="card">
+                        <div class="col">
+                            <h6 class="fw-semibold">Premium</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-48"> 10 </span> USD</h4>
+                            <h6 class="fs-15">Per user/month if billed annually ($12.50 billed monthly)</h6>
+                            <div class="card-body">
+                                <p class="pt-5">For teams that need to track and visualize multiple projects in several
+                                    ways, including boards, timelines, calendars, etc.</p>
+                            </div>
+                            <div class="card-button mt-5">
+                                <a href="" class="btn btn-seceondary ">Try for free</a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="" class="">Learn more about Premium</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--fourth card-->
+                <div class="col-12 col-lg-3">
+                    <div class="card">
+                        <div class="col">
+                            <h6 class="fw-semibold">Enterprise</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-48 price">17.50</span> USD</h4>
+                            <h6 class="fs-15">Per user/month - billed annually ($210.00 annual price per user)</h6>
+                            <div class="card-body">
+                                <p class="pt-5">For organizations that need to connect work across teams with more
+                                    security and controls</p>
+                                <div class="">
+                                    <h4 class="fs-5 mt-3">Est cost for <span
+                                            class=" user-count text-decoration-underline">50</span> users</h4>
+                                    <input type="range" name="user-Count" class="user-count" min="50" max="5000"
+                                        value="0" data-target="max-range-text-1">
+                                    <p class=" d-none max-range-text" id="max-range-text-1">Call our services for more
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-button mt-5">
+                                <a href="/" class="btn btn-seceondary mt-5 mt-lg-0">Contact sales</a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="" class="">Learn more about Enterprise</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--partners section-->
+    <section class="partners-section">
+        <div class="container py-9">
+            <div class="row ">
+                <div class="col-12">
+                    <h3 class="text-center">Join over 2,000,000 worldwide that are using trello to get more done.</h3>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center pt-6 gap-5">
+                        <div class="image-wrapper">
+                            <a href="#"><img src="/assets/images/visa-logo.png"></a>
+                        </div>
+                        <div class="image-wrapper">
+                            <a href=""><img src="/assets/images/coinbase-logo.jpg" alt=""></a>
+                        </div>
+                        <div class="image-wrapper">
+                            <a href=""><img src="/assets/images/john-deere-logo.svg" alt=""></a>
+                        </div>
+                        <div class="image-wrapper">
+                            <a href=""><img src="/assets/images/Zoom-logo.svg" alt=""></a>
+                        </div>
+                        <div class="image-wrapper">
+                            <a href=""><img src="/assets/images/grand-haytt-logo.png" alt=""></a>
+                        </div>
+                        <div class="image-wrapper">
+                            <a href=""><img src="/assets/images/Fender-logo.svg" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Get started section -->
+    <section class="get-started-section">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">Get Started With Trello Today</h2>
+                    <div class="d-flex flex-column flex-sm-row flex-wrap justify-content-center mt-3 gap-3">
+                        <input type="email" name="email" placeholder="Email">
+                        <button class="btn btn-primary"> Sign up - Its free </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="container-fluid pt-5">
+            <div class="row justify-content-center align-items-center gap-3">
+                <div class="col-12 col-lg-2 ">
+                    <div class="footer-logo ">
+                        <!--SVG-->
+                        <svg aria-label="Atlassian Trello" fill="#ffffff" height="50" role="img" viewBox="0 0 312 105"
+                            width="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="Logo-sc-1anfgcw-0 gguOta">
+                            <defs>
+                                <linearGradient id="trello-logo-gradient-white" x1="49.992%" x2="49.992%" y1="100%"
+                                    y2=".016%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity=".5"></stop>
+                                    <stop offset="15%" stop-color="#ffffff" stop-opacity=".65"></stop>
+                                    <stop offset="30%" stop-color="#ffffff" stop-opacity=".78"></stop>
+                                    <stop offset="46%" stop-color="#ffffff" stop-opacity=".88"></stop>
+                                    <stop offset="62%" stop-color="#ffffff" stop-opacity=".95"></stop>
+                                    <stop offset="80%" stop-color="#ffffff" stop-opacity=".99"></stop>
+                                    <stop offset="100%" stop-color="#ffffff"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path d="M42.6 5.2 42.6 17.3 28.3 17.3 28.3 63 14.5 63 14.5 17.2.2 17.2.2 5.2z"
+                                transform="translate(87 40)"></path>
+                            <path
+                                d="M60.2,63 L47.5,63 L47.5,18 L60.2,18 L60.2,26.6 C62.6,20.5 66.5,16.9 73.4,17.4 L73.4,30.7 C64.4,30 60.2,32.2 60.2,39.4 L60.2,63 Z"
+                                transform="translate(87 40)"></path>
+                            <path
+                                d="M143,63.4 C134.6,63.4 129.4,59.4 129.4,49.9 L129.4,0.6 L142.2,0.6 L142.2,48.1 C142.2,50.8 144,51.8 146.2,51.8 C146.8,51.8 147.5,51.8 148.1,51.7 L148.1,62.8 C146.4,63.2 144.7,63.4 143,63.4 L143,63.4 Z"
+                                transform="translate(87 40)"></path>
+                            <path
+                                d="M169.8,63.4 C161.4,63.4 156.2,59.4 156.2,49.9 L156.2,0.6 L169,0.6 L169,48.1 C169,50.8 170.8,51.8 173,51.8 C173.6,51.8 174.3,51.8 174.9,51.7 L174.9,62.8 C173.2,63.2 171.5,63.4 169.8,63.4 L169.8,63.4 Z"
+                                transform="translate(87 40)"></path>
+                            <path
+                                d="M181,40.5 C181,26.6 189,17.1 202.8,17.1 C216.6,17.1 224.4,26.6 224.4,40.5 C224.4,54.4 216.5,64.1 202.8,64.1 C189.1,64.1 181,54.3 181,40.5 Z M193.5,40.5 C193.5,47.3 196.3,52.6 202.8,52.6 C209.3,52.6 211.9,47.2 211.9,40.5 C211.9,33.8 209.1,28.5 202.8,28.5 C196.5,28.5 193.5,33.7 193.5,40.5 Z"
+                                transform="translate(87 40)"></path>
+                            <path
+                                d="M90.6,44.6 C94.2,45 97.8,45.2 101.3,45.2 C111.1,45.2 119.3,42.6 119.3,33.1 C119.3,23.9 110.8,17 100.6,17 C86.9,17 78.1,27 78.1,40.8 C78.1,55.2 85.7,63.8 102.8,63.8 C107.9,63.9 112.9,63 117.7,61.2 L117.7,50.4 C113.3,51.8 108.3,53.2 103.3,53.2 C96.5,53.3 91.8,51 90.6,44.6 L90.6,44.6 Z M100.4,26.9 C104,26.9 106.9,29.3 106.9,32.7 C106.9,37 102.3,38.4 97.1,38.4 C94.9,38.4 92.6,38.2 90.4,37.9 C90.6,35.8 91.2,33.8 92.2,31.9 C93.8,28.8 97,26.9 100.4,26.9 Z"
+                                transform="translate(87 40)"></path>
+                            <path fill="url(#trello-logo-gradient-white)"
+                                d="M55.3,40.6 L7.8,40.6 C3.7,40.6 0.4,43.9 0.4,48 L0.4,95.6 C0.4,99.7 3.7,103 7.8,103 L55.3,103 C59.4,103 62.7,99.7 62.7,95.6 L62.7,48 C62.7,43.9 59.4,40.6 55.3,40.6 Z M27.2,85.5 C27.2,86.9 26.1,88 24.7,88 L14.3,88 C12.9,88 11.8,86.9 11.8,85.5 L11.8,54.6 C11.8,53.2 12.9,52.1 14.3,52.1 L24.7,52.1 C26.1,52.1 27.2,53.2 27.2,54.6 L27.2,85.5 Z M51.2,71.3 C51.2,72.7 50.1,73.8 48.8,73.8 L38.3,73.8 C36.9,73.8 35.8,72.7 35.8,71.3 L35.8,54.6 C35.8,53.2 36.9,52.1 38.3,52.1 L48.7,52.1 C50.1,52.1 51.2,53.2 51.2,54.6 L51.2,71.3 Z">
+                            </path>
+                            <g opacity=".7">
+                                <path
+                                    d="M98.9,16.7 C98.9,12.7 96.3,10.9 91.5,9.7 C88.5,8.9 87.8,8.3 87.8,7.3 C87.8,6.1 88.9,5.5 90.9,5.5 C93.3,5.6 95.7,6.2 97.9,7.3 L97.9,2.3 C95.8,1.3 93.4,0.8 91.1,0.8 C85.8,0.8 82.9,3.3 82.9,7.4 C82.9,11.3 85.5,13.3 89.9,14.3 C93,15 93.9,15.5 93.9,16.8 C93.9,17.8 93.2,18.6 90.9,18.6 C88.1,18.5 85.3,17.7 82.8,16.3 L82.8,21.6 C85.3,22.8 88,23.5 90.8,23.5 C96.2,23.5 98.9,20.8 98.9,16.7 L98.9,16.7 Z"
+                                    transform="translate(94)"></path>
+                                <path
+                                    d="M159.3 1.2 159.3 23.2 164 23.2 164 6.4 166 10.8 172.6 23.1 178.5 23.1 178.5 1.1 173.8 1.1 173.8 15.3 172 11.2 166.7 1.1 159.3 1.1z"
+                                    transform="translate(94)"></path>
+                                <path d="M129.6 1.2 124.5 1.2 124.5 23.2 129.6 23.2z" transform="translate(94)"></path>
+                                <path d="M43.2 1.2 43.2 23.2 53.7 23.2 55.3 18.4 48.3 18.4 48.3 1.2z"
+                                    transform="translate(94)"></path>
+                                <path d="M22.4 1.2 22.4 6 28.1 6 28.1 23.2 33.2 23.2 33.2 6 39.3 6 39.3 1.2z"
+                                    transform="translate(94)"></path>
+                                <path
+                                    d="M15,1.2 L8.3,1.2 L0.6,23.2 L6.5,23.2 L7.6,19.5 C8.9,19.9 10.3,20.1 11.7,20.1 C13.1,20.1 14.5,19.9 15.8,19.5 L16.9,23.2 L22.8,23.2 L15,1.2 Z M11.6,15.5 C10.6,15.5 9.7,15.4 8.8,15.1 L11.6,5.5 L14.4,15.1 C13.5,15.4 12.6,15.5 11.6,15.5 Z"
+                                    transform="translate(94)"></path>
+                                <path
+                                    d="M71.7,1.2 L65,1.2 L57.3,23.2 L63.2,23.2 L64.3,19.5 C65.6,19.9 67,20.1 68.4,20.1 C69.8,20.1 71.2,19.9 72.5,19.5 L73.6,23.2 L79.5,23.2 L71.7,1.2 Z M68.4,15.5 C67.4,15.5 66.5,15.4 65.6,15.1 L68.4,5.5 L71.2,15.1 C70.3,15.4 69.3,15.5 68.4,15.5 Z"
+                                    transform="translate(94)"></path>
+                                <path
+                                    d="M148,1.2 L141.3,1.2 L133.6,23.2 L139.5,23.2 L140.6,19.5 C141.9,19.9 143.3,20.1 144.7,20.1 C146.1,20.1 147.5,19.9 148.8,19.5 L149.9,23.2 L155.8,23.2 L148,1.2 Z M144.6,15.5 C143.6,15.5 142.7,15.4 141.8,15.1 L144.6,5.5 L147.4,15.1 C146.5,15.4 145.6,15.5 144.6,15.5 Z"
+                                    transform="translate(94)"></path>
+                                <path
+                                    d="M119.2,16.7 C119.2,12.7 116.6,10.9 111.8,9.7 C108.8,8.9 108.1,8.3 108.1,7.3 C108.1,6.1 109.2,5.5 111.1,5.5 C113.5,5.6 115.9,6.2 118.1,7.3 L118.1,2.3 C115.9,1.3 113.6,0.8 111.2,0.8 C105.9,0.8 103,3.3 103,7.4 C103,11.3 105.6,13.3 110,14.3 C113.1,15 114,15.5 114,16.8 C114,17.8 113.3,18.6 111,18.6 C108.2,18.5 105.4,17.7 102.9,16.3 L102.9,21.6 C105.4,22.8 108.1,23.5 110.9,23.5 C116.6,23.5 119.2,20.8 119.2,16.7 L119.2,16.7 Z"
+                                    transform="translate(94)"></path>
+                            </g>
+                        </svg>
+                        <a href="" class="btn bg-transparent text-white text-end mt-3">Login</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <div class="footer-options">
+                        <div class="line"></div>
+                        <h5 class="text-white fs-6 pt-4 pt-lg-0">About Trello</h5>
+                        <a href="#" class="text-white fs-12 mt-2">What’s Behind the boards.</a>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-2">
+                    <div class="footer-options">
+                        <div class="line"></div>
+                        <h5 class="text-white fs-6 pt-4 pt-lg-0">Jobs</h5>
+                        <a href="#" class="text-white fs-12 mt-2">Learn about the open role in Trello team.</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <div class="footer-options">
+                        <div class="line"></div>
+                        <h5 class="text-white fs-6 pt-4 pt-lg-0">Apps</h5>
+                        <a href="#" class="text-white fs-12 mt-2">Download the Trello app for your desktop and mobile
+                            devices.</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <div class="footer-options">
+                        <div class="line"></div>
+                        <h5 class="text-white fs-6 pt-4 pt-lg-0">Contact us</h5>
+                        <a href="#" class="text-white fs-12 mt-2">Need anything? Get in touch and we can help.</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+            <div class="container py-5 ">
+                <div class="row flex-column flex-sm-row align-items-center row-gap-4">
+                    <div class="col-12 col-lg-2">
+                        <div class="">
+                            <a class="text-white fs-20 dropdown-toggle " id="languageDropdown" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-globe"></i> English
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="footer-option text-left  column-gap-5">
+                            <a href="#" class="text-white">
+                                <h6 class="mt-3 mt-lg-0 ">Privacy Policy</h6>
+                            </a>
+                            <a href="#" class="text-white  ">
+                                <h6 class="mt-3 mt-lg-0 ">Terms</h6>
+                            </a>
+                            <h6 class="text-white mt-3 mt-lg-0 ">Copyright © 2024 Atlassian</h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="d-flex justify-content-lg-end mt-5 mt-lg-0  gap-4">
+                            <a href="" class="fa fa-instagram "></a>
+                            <a href="" class="fa fa-linkedin "></a>
+                            <a href="" class="fa fa-twitter "></a>
+                            <a href="" class="fa fa-youtube "></a>
+                            <a href="" class="fa fa-facebook"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Navbar JS-->
+    <script>
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <!--Vertical Thumbnail section JS-->
+    <script>
+        function showThumbnail(index) {
+            var thumbnails = document.querySelectorAll('.thumbnails img');
+            thumbnails.forEach(function (thumbnail, i) {
+                if (i === index) {
+                    thumbnail.classList.remove('d-none');
+                } else {
+                    thumbnail.classList.add('d-none');
+                }
+            });
+        }
+
+        function toggleActive(element) {
+            var boxes = document.querySelectorAll('.box');
+            if (!element.classList.contains('active')) {
+                for (var i = 0; i < boxes.length; i++) {
+                    boxes[i].classList.remove('active');
+                }
+                element.classList.add('active');
+            }
+        }
+    </script>
+    <!-- workflow-section JS-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.firstswiper', {
+            slidesPerView: 1,
+            loop: false,
+            initialSlide: 0,
+            centeredSlides: false,
+            spaceBetween: 30,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                576: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            },
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.previous',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar', // Use 'progressbar' for a slider-type pagination
+            },
+
+        });
+
+    </script>
+    <!-- feedback-section swiper JS -->
+    <script>
+        var swiper = new Swiper('.seceond-swiper', {
+            slidesPerView: 1,
+            initialSlide: 0,
+            spaceBetween: 100,
+            navigation: {
+                prevEl: '.previous',
+                nextEl: '.next',
+            },
+            pagination: {
+                prevEl: '.previous',
+                nextEl: '.next',
+            }
+        });
+    </script>
+    <!--price card range JS-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var rangeInputs = document.getElementsByClassName('user-count');
+            var userCostDisplays = document.getElementsByClassName('user-cost'); // This line seems unnecessary as there's no element with the class 'user-cost' in your HTML
+            var priceDisplays = document.getElementsByClassName('price');
+            var maxRangeTexts = document.getElementsByClassName('max-range-text');
+            // Loop through all range inputs
+            for (var i = 0; i < rangeInputs.length; i++) {
+                rangeInputs[i].addEventListener('input', function () {
+                    var userCount = parseInt(this.value);
+                    var priceDisplay = this.closest('.card').querySelector('.price'); // Find the price display within the closest parent card element
+                    var userCountDisplay = this.closest('.card').querySelector('.user-count'); // Find the user count display within the closest parent card element
+                    userCountDisplay.textContent = userCount;
+                    var targetId = this.getAttribute('data-target');
+                    var maxRangeText = document.getElementById(targetId);
+                    // Calculate the price based on the user count
+                    var price = calculatePrice(userCount);
+                    priceDisplay.textContent = price.toFixed(2);
+
+                    if (userCount >= 5000) {
+                        maxRangeText.classList.remove('d-none');
+                    } else {
+                        maxRangeText.classList.add('d-none');
+                    }
+                });
+            }
+
+            // Function to calculate the price based on the user count
+            function calculatePrice(userCount) {
+                // Your calculation logic goes here
+                // For example, let's assume the price increases by $1 for every 100 users
+                return 17.50 + (userCount / 100);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,608 @@
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.image-wrapper {
+    object-fit: cover;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+p {
+    margin: 0;
+}
+
+/*Button*/
+.btn {
+    padding: 12px 16px 13px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    padding: 15px;
+    font-size: 16px;
+}
+
+.btn-seceondary {
+    background: transparent;
+    color: #06111C;
+    border: 1px solid #2684FF;
+
+}
+
+.btn-seceondary:hover {
+    background: #DFFFFD;
+    border: 1px solid #2684FF;
+}
+
+/*  Padding*/
+.py-9 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.pt-6 {
+    padding-top: 70px;
+}
+
+.mt-16 {
+    margin-top: 160px;
+}
+
+.mb-13 {
+    margin-bottom: 130px;
+}
+
+/*Headings*/
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+h4 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 35px;
+}
+
+h6 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+}
+
+/*font weight and size*/
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-48 {
+    font-size: 48px;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+/*background and colors*/
+.bg-lightblue {
+    background: #DEEBFF;
+}
+
+.navbar {
+    padding: 0;
+    background: white;
+}
+
+.navbar.scrolled {
+    transition: 0.2s ease-out;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.navbar:hover {
+    transition: 0.2s ease-out;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    padding: 30px 16px 16px 16px !important;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+.nav-button .btn {
+    padding: 20px;
+    font-size: 19px;
+    border-radius: 0;
+}
+
+/*Hero section */
+.hero-section {
+    background: url(/assets/images/white-wave-mobile.svg) center bottom -0.5px / 100% 24% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto no-repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal;
+    color: rgb(255, 255, 255);
+
+}
+
+.hero-section input[type="email"] {
+    padding: 15px;
+    width: 50%;
+    border-radius: 5px;
+    border: 2px transparent;
+}
+
+.hero-section a h6 i {
+    font-size: 20px;
+}
+
+.hero-section h6:hover {
+    color: #808080;
+}
+
+/*productivity section*/
+
+.productivity-section {
+    background: lightcyan;
+}
+
+.productivity-section .box {
+    background: transparent;
+    padding: 16px 16px 16px 24px;
+    text-align: left;
+    display: block;
+    transition: 0.1s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.productivity-section .box.active {
+    background: rgb(255, 255, 255);
+    color: rgb(9, 30, 66);
+    border-left: 8px solid rgb(0, 199, 229);
+    box-shadow: rgba(9, 30, 66, 0.15) 0px 13px 16px 0px;
+
+
+}
+
+.productivity-section .image-wrapper img {
+    object-fit: cover;
+    width: 100%;
+}
+
+/*Workflow section*/
+.workflow-section .card {
+    padding: 30px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-wrapper {
+    height: fit-content;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.workflow-section .icons {
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    border: 8px solid rgb(255, 255, 255);
+    height: 48px;
+    left: 16px;
+    position: absolute;
+    top: -24px;
+    width: 48px;
+}
+
+.workflow-section .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-border {
+    border-top: 50px solid #FF7452;
+}
+
+.meeting-border {
+    border-top: 50px solid#2684FF;
+}
+
+.onboarding-border {
+    border-top: 50px solid #57D9A3;
+}
+
+.task-border {
+    border-top: 50px solid #FFC400;
+}
+
+.brainstorming-border {
+    border-top: 50px solid #00C7E5;
+}
+
+.resources-border {
+    border-top: 50px solid #F99CD8;
+}
+
+.workflow-section .swiper-button {
+    border: 2px solid white;
+    padding: 0;
+    width: 40px;
+    height: 45px;
+    background-color: #F4F4F4;
+    color: #06111C;
+    border-radius: 100%;
+    font-size: 25px;
+    ;
+}
+
+.swiper-button:hover {
+    color: #2684FF;
+}
+
+.swiper-button.swiper-button-disabled {
+    border-color: #808080;
+    background-color: transparent;
+    color: #808080;
+    border: 0;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #00C7E5;
+    transform-origin: left;
+
+}
+
+/*work section*/
+.work-section {
+    background: url("/assets/images/white-background.svg") left center / contain no-repeat scroll padding-box border-box, url(/assets/images/white-background.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(240deg, rgb(0, 184, 217), rgb(0, 101, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(0, 101, 255);
+
+}
+
+.work-section .card {
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 30, 66);
+    padding: 40px;
+    left: 10%;
+    width: 80%;
+    border-radius: 0.5rem;
+    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+
+}
+
+.work-section .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* feature section*/
+
+.feature-section .card {
+    background-color: rgb(250, 251, 252);
+    color: rgb(9, 30, 66);
+    border: transparent;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.feedback-section .box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.feedback-section .box-image {
+    background-image: url('/assets/images/box-image.svg');
+    background-size: cover;
+    padding: 40px;
+
+}
+
+.feedback-section .box-color {
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 32px;
+}
+
+.line {
+    content: "";
+    height: 1px;
+    width: 30%;
+    background-color: #000;
+    margin-top: 150px;
+}
+
+.feedback-section .swiper-button {
+    border: 2px solid white;
+    padding: 0;
+    width: 40px;
+    height: 45px;
+    background-color: #F4F4F4;
+    color: #06111C;
+    border-radius: 100%;
+    font-size: 25px;
+}
+
+.swiper-button:hover {
+    color: #2684FF;
+}
+
+.swiper-button.swiper-button-disabled {
+    border-color: #808080;
+    background-color: transparent;
+    color: #808080;
+    border: 0;
+}
+
+/* Price-cards-section */
+.price-cards-section {
+    background: #DEEBFF;
+}
+
+.price-cards-section .row>* {
+    padding: 0;
+}
+
+.price-cards-section .card {
+    background-color: rgb(255, 255, 255);
+    min-height: 500px;
+    padding: 20px;
+    border-radius: 0;
+}
+
+.price-cards-section .card-body {
+    padding: 0;
+    height: 180px;
+}
+
+.price-cards-section input {
+    width: 100%;
+    border: none;
+
+}
+
+.partners-section .image-wrapper {
+    object-fit: contain;
+    width: 150px;
+    height: 100%;
+}
+
+/* Get started section */
+.get-started-section {
+    background: url(/assets/images/banner-option.svg) left center / contain no-repeat scroll padding-box border-box, url(/assets/images/banner-option2.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal, normal;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+}
+
+.get-started-section input[type="email"] {
+    padding: 15px;
+    width: 30%;
+    border-radius: 5px;
+    border: 2px transparent;
+}
+
+/*Footer section*/
+footer a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(23, 43, 77);
+    
+}
+
+.footer-logo{
+    justify-content: left;
+}
+
+.footer-options {
+    min-height: 60px;
+}
+
+footer .line {
+    background-color: #808080;
+    width: 100%;    
+    margin-top: 50px;
+}
+footer .footer-options .line{
+    background-color: #808080;
+    width: 100%;  
+    margin-top: 10px; 
+    display: none;
+}
+footer .fa {
+    padding: 8px;
+    font-size: 20px;
+    width:40px;
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+.footer-option{
+    display:flex;
+}
+
+/*Media Queries*/
+@media screen and (max-width:991.98) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .mb-13 {
+        margin-bottom: 120px;
+    }
+
+}
+
+@media screen and (max-width:767.98px) {
+    h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .mb-13 {
+        margin-bottom: 100px;
+    }
+
+    .feedback-section.box-color {
+        width: 100%;
+        padding: 32px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+}
+
+@media screen and (max-width:575.98px) {
+    h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px
+    }
+
+    .hero-section p {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .fs-20 {
+        font-size: 18px;
+    }
+
+    .pt-6 {
+        padding-top: 60px;
+    }
+
+    .mt-16 {
+        margin-top: 60px;
+    }
+
+    .mb-13 {
+        margin-bottom: 60px;
+    }
+
+    .hero-section input[type="email"] {
+        display: none;
+    }
+
+    .work-section .card {
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .workflow-section .swiper-button {
+        display: none;
+    }
+
+    .feature-section .card {
+        width: auto;
+    }
+
+    .feedback-section .box-color {
+        width: 100%;
+        padding: 32px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .feedback-section .box-image {
+        padding: 20px;
+    }
+
+    .line {
+        width: 60%;
+        margin-top: 30px;
+    }
+
+    div .box-color h2 {
+        font-size: 24px;
+    }
+
+    .price-cards-section {
+        padding: 10px;
+    }
+
+    .price-cards-section .card {
+        min-height: 300px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .price-cards-section .card-body {
+        height: 150px;
+    }
+
+    .price-cards-section .card-button {
+        margin-top: 30px;
+    }
+
+    .get-started-section {
+        background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    }
+
+    .get-started-section input[type="email"] {
+        display: none;
+    }
+
+    footer .footer-options .line{
+        width: 100%;
+        display: block;
+
+    }
+    .footer-option{
+        display: block;
+    }
+}
