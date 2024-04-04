@@ -94,29 +94,66 @@
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-                        Features
-                    </a>
-                
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-                        Solutions
-                    </a>
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-                        Plans
-                    </a>
-    
-                 <a class="nav-link" href="#">Pricing</a>
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-                        Resources
-                    </a>
-                </ul>
-                    <!-- toggle buttons -->
-                    <div class="nav-button d-lg-none text-center"> <!-- Hide on larger screens -->
-                        <a class="btn bg-transparent">Log in</a>
-                        <a class="btn btn-primary">Get Trello for free</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Features
+                        </a>
+                        <div class="container">
+                        <div class="row">
+                            <div class="">
+                            <ul class="dropdown-menu mega-menu" aria-labelledby="featuresDropdown">
+                            <div class="megamenu-header">
+                             <h5 class="">Explore the feature that help team succeed</h5>
+                            </div>
+                             <div class="line"></div>
+                            </ul>
+
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+            
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                            <li><a class="dropdown-item" href="#">Solution 1</a></li>
+                            <li><a class="dropdown-item" href="#">Solution 2</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="plansDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Plans
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="plansDropdown">
+                            <li><a class="dropdown-item" href="#">Plan 1</a></li>
+                            <li><a class="dropdown-item" href="#">Plan 2</a></li>
+                        </ul>
+                    </div>
+            
+                    <a class="nav-link" href="#">Pricing</a>
+            
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <li><a class="dropdown-item" href="#">Resource 1</a></li>
+                            <li><a class="dropdown-item" href="#">Resource 2</a></li>
+                        </ul>
                     </div>
                 </div>
+                
+                <!-- toggle buttons -->
+                <div class="nav-button d-lg-none text-center"> <!-- Hide on larger screens -->
+                    <a class="btn bg-transparent">Log in</a>
+                    <a class="btn btn-primary">Get Trello for free</a>
+                </div>
             </div>
+            
+            
             <!-- Buttons for larger screens -->
             <div class="nav-button d-none d-lg-flex"> <!-- Hide on smaller screens -->
                 <a class="btn bg-transparent">Log in</a>
@@ -309,7 +346,7 @@
     </section>
     <!-- work-section -->
     <section class="work-section">
-        <div class="container pt-6">
+        <div class="container py-9">
             <div class="row">
                 <div class="col">
                     <h2 class="text-white text-center mt-5">See work in a whole new way</h2>
@@ -372,7 +409,7 @@
     </section>
     <!-- feature section -->
     <section class="feature-section">
-        <div class="container py-9">
+        <div class="container py-12 ">
             <div class="row">
                 <div class="col-12 col-lg-7">
                     <h6 class="fw-500">POWERFUL WAYS TO GROW</h6>
@@ -940,7 +977,7 @@
         var swiper = new Swiper('.seceond-swiper', {
             slidesPerView: 1,
             initialSlide: 0,
-            spaceBetween: 100,
+            spaceBetween:500,
             navigation: {
                 prevEl: '.previous',
                 nextEl: '.next',

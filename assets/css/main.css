@@ -50,7 +50,9 @@ p {
     padding-top: 90px;
     padding-bottom: 90px;
 }
-
+.py-12{
+    padding-top: 120px;
+}
 .pt-6 {
     padding-top: 70px;
 }
@@ -150,7 +152,17 @@ h6 {
     font-size: 19px;
     border-radius: 0;
 }
+.mega-menu{
+    width: 80vw;
+    padding: 30px;
 
+}
+.mega-menu .line{
+    width:50%;
+    margin-top:20px;
+    background-color:grey;
+    height: 0.5px;
+}
 /*Hero section */
 .hero-section {
     background: url(/assets/images/white-wave-mobile.svg) center bottom -0.5px / 100% 24% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto no-repeat scroll padding-box border-box rgb(82, 67, 170);
@@ -306,6 +318,9 @@ h6 {
     border-radius: 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
 
+}
+.work-section .card:last-child{
+    margin-bottom: -155px;
 }
 
 .work-section .row {
