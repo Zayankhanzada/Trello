@@ -97,7 +97,9 @@ h6 {
 .fs-20 {
     font-size: 20px;
 }
-
+.fs-12{
+    font-size:12px ;
+}
 .fs-15 {
     font-size: 15px;
 }
@@ -163,6 +165,19 @@ h6 {
     background-color:grey;
     height: 0.5px;
 }
+.mega-menu .card{
+    width: fit-content;
+    padding: 5px;
+    border: 0;
+}
+.mega-menu .card-header{
+padding: 0;
+border: 0;
+background: none;
+}
+.mega-menu .card-body{
+    padding: 0;
+}
 /*Hero section */
 .hero-section {
     background: url(/assets/images/white-wave-mobile.svg) center bottom -0.5px / 100% 24% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto no-repeat scroll padding-box border-box rgb(82, 67, 170);
@@ -224,9 +239,6 @@ h6 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.swiper-wrapper {
-    height: fit-content;
-}
 
 .swiper-slide {
     height: auto;
