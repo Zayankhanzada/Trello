@@ -227,13 +227,15 @@ h6 {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .productivity-section .box.active {
     background: rgb(255, 255, 255);
     color: rgb(9, 30, 66);
     border-left: 8px solid rgb(0, 199, 229);
     box-shadow: rgba(9, 30, 66, 0.15) 0px 13px 16px 0px;
 }
-.productivity-section .swiper-container{
+
+.productivity-section .swiper-container {
     overflow-x: hidden;
 }
 
@@ -361,24 +363,22 @@ h6 {
 /* feedback-section */
 .feedback-section .box {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
     position: relative;
-    left: 10%;
     cursor: pointer;
     background-image: url('/assets/images/box-image.svg');
     background-size: cover;
-
+    padding: 40px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 
 .feedback-section .box-color {
-    width: 80%;
-    background: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-
+    padding: 40px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .feedback-section .line {
@@ -386,6 +386,9 @@ h6 {
     height: 1px;
     width: 50%;
     background-color: #000;
+}
+.feedback-section .swiper-slide{
+left: 10%;
 }
 
 .feedback-section .image-wrapper {
@@ -630,23 +633,22 @@ footer .fa {
         width: auto;
     }
 
-    .feedback-section .box {
-        left: 0;
-    }
 
     .feedback-section .box-color {
         width: 100%;
-        padding: 32px;
+        padding: 30px;
         border-top-right-radius: 0;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+.feedback-section .box{
+    padding: 30px;
+    border-bottom-left-radius: 0;
+}
 
-    .feedback-section .box-image {
-        padding: 20px;
-    }
-
-
+.feedback-section .swiper-slide{
+    left: 0%;
+}
 
     div .box-color h2 {
         font-size: 24px;
