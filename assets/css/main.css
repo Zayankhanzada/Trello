@@ -203,14 +203,18 @@ h6 {
     border: 2px transparent;
 }
 
-.hero-section a h6 i {
-    font-size: 20px;
+.hero-section div a i {
+    font-size: 16px;
+    transition: all 0.25s ease;
 }
 
-.hero-section h6:hover {
-    color: #808080;
-}
 
+
+.hero-section div a i:hover {
+    
+    margin-left: 10px;
+
+}
 
 /*productivity section*/
 
