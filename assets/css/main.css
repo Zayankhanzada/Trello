@@ -275,29 +275,31 @@ h6 {
 .workflow-section .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-.project-card-border {
-    border-top: 50px solid #FF7452;
+.border-top-50{
+    border-top-width: 50px;
+}
+.red-top-border {
+    border-top-color:#FF7452;
 }
 
-.meeting-card-border {
-    border-top: 50px solid#2684FF;
+.skyblue-top-border {
+    border-top-color: #2684FF;
 }
 
-.onboarding-card-border {
-    border-top: 50px solid #57D9A3;
+.green-top-border {
+    border-top-color:#57D9A3;
 }
 
-.task-card-border {
-    border-top: 50px solid #FFC400;
+.yellow-top-border {
+    border-top-color:#FFC400;
 }
 
-.brainstorming-card-border {
-    border-top: 50px solid #00C7E5;
+.blue-top-border {
+    border-top-color:#00C7E5;
 }
 
-.resources-card-border {
-    border-top: 50px solid #F99CD8;
+.pink-top-border {
+    border-top-color:#F99CD8;
 }
 
 .workflow-section .swiper-button {
@@ -522,18 +524,6 @@ footer {
     transition: all 0.25s ease;
 }
 
-footer .line {
-    background-color: #808080;
-    width: 100%;
-    margin-top: 50px;
-}
-
-footer .footer-options .line {
-    background-color: #808080;
-    width: 100%;
-    margin-top: 10px;
-    display: none;
-}
 
 footer .fa {
     padding: 8px;
@@ -680,10 +670,9 @@ footer .fa {
         display: none;
     }
 
-    footer .footer-options .line {
-        width: 100%;
-        display: block;
-
+    .footer-options .line {
+        display:block;
+        color: #DEEBFF;
     }
 
     .footer-option {
