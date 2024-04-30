@@ -104,6 +104,87 @@ document.addEventListener('DOMContentLoaded', function () {
         return 17.50 + (userCount / 100);
     }
 });
+function showImage(index) {
+    galleryTop.slideTo(index);
+}
+
+function toggleActive(element) {
+    var boxes = document.querySelectorAll('.box');
+    boxes.forEach(function (box) {
+        box.classList.remove('active');
+    });
+    element.classList.add('active');
+}
+
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    direction: '',
+});
+
+var galleryTop = new Swiper('.gallery-top', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+        swiper: {
+            el: '.gallery-thumbs',
+            slidesPerView: 'auto',
+            direction: 'vertical',
+            spaceBetween: 10,
+            breakpoints: {
+                1200: {
+                    direction: 'vertical',
+                },
+                768: {
+                    direction: 'vertical',
+                },
+                320: {
+                    direction: 'horizontal'
+                }
+            }
+        }
+    },
+    on: {
+        slideChangeTransitionStart: function () {
+            var activeIndex = this.realIndex;
+            var boxes = document.querySelectorAll('.box');
+            boxes.forEach(function (box) {
+                box.classList.remove('active');
+            });
+            var activeBox = document.querySelector('.box[data-index="' + activeIndex + '"]');
+            activeBox.classList.add('active');
+        }
+    }
+});
+
+function updateActiveBox() {
+    var activeIndex = galleryTop.realIndex;
+    var boxes = document.querySelectorAll('.box');
+    boxes.forEach(function (box) {
+        box.classList.remove('active');
+    });
+    var activeBox = document.querySelector('.box[data-index="' + activeIndex + '"]');
+    activeBox.classList.add('active');
+}
+
+galleryTop.on('resize', function () {
+    if (window.innerWidth < 768) {
+        galleryTop.thumbs.swiper.params.direction = 'horizontal';
+        updateActiveBox();
+    } else {
+        galleryTop.thumbs.swiper.params.direction = 'vertical';
+    }
+    galleryTop.thumbs.swiper.update();
+});
+
+// Initial call to update active box on page load
+updateActiveBox();
+
+
+
+
 
 // price card height checker
 

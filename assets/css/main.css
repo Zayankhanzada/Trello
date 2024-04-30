@@ -19,6 +19,7 @@ img {
 }
 
 p {
+    font-size: 16px;
     margin: 0;
 }
 
@@ -51,20 +52,12 @@ p {
     padding-bottom: 90px;
 }
 
-.py-12 {
+.pt-12 {
     padding-top: 120px;
 }
 
-.pt-6 {
+.pt-7 {
     padding-top: 70px;
-}
-
-.pt-13 {
-    padding-top: 125px;
-}
-
-.mb-13 {
-    margin-bottom: 130px;
 }
 
 /*Headings*/
@@ -92,7 +85,6 @@ h4 {
 h6 {
     font-size: 16px;
     margin: 0;
-    font-weight: 400;
 }
 
 /*font weight and size*/
@@ -104,18 +96,6 @@ h6 {
     font-size: 12px;
 }
 
-.fs-15 {
-    font-size: 15px;
-}
-
-.fs-32 {
-    font-size: 32px;
-}
-
-.fs-48 {
-    font-size: 48px;
-}
-
 .fw-500 {
     font-weight: 500;
 }
@@ -123,11 +103,6 @@ h6 {
 /*background and colors*/
 .bg-lightblue {
     background: #DEEBFF;
-}
-
-.navbar {
-    padding: 0;
-    background: white;
 }
 
 .navbar.scrolled {
@@ -143,26 +118,15 @@ h6 {
 
 .nav-link {
     padding: 30px 16px 16px 16px !important;
-    display: flex;
-    font-weight: 500;
-    align-items: center;
-    gap: 5px;
 }
 
 .nav-link:hover {
     color: dodgerblue;
 }
 
-.nav-button .btn {
-    padding: 20px;
-    font-size: 19px;
-    border-radius: 0;
-}
-
 .mega-menu {
     width: 80vw;
     padding: 30px;
-
 }
 
 .mega-menu .line {
@@ -197,24 +161,9 @@ h6 {
 }
 
 .hero-section input[type="email"] {
-    padding: 15px;
-    width: 50%;
-    border-radius: 5px;
     border: 2px transparent;
 }
 
-.hero-section div a i {
-    font-size: 16px;
-    transition: all 0.25s ease;
-}
-
-
-
-.hero-section div a i:hover {
-
-    margin-left: 10px;
-
-}
 
 /*productivity section*/
 
@@ -226,9 +175,7 @@ h6 {
     background: transparent;
     padding: 16px 16px 16px 24px;
     text-align: left;
-    display: block;
     transition: 0.1s ease;
-    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -341,17 +288,14 @@ h6 {
 .work-section .card {
     background-color: rgb(255, 255, 255);
     color: rgb(9, 30, 66);
-    padding: 30px;
     border-radius: 8px;
     box-shadow: rgba(9, 30, 66, 0.15) 0px 8px 16px 0px;
     width: 80%;
     left: 10%;
-
 }
 
 .work-section .card:last-child {
     margin-bottom: -155px;
-    ;
 }
 
 .work-section .image-wrapper {
@@ -372,7 +316,6 @@ h6 {
     background-color: rgb(250, 251, 252);
     color: rgb(9, 30, 66);
     border: transparent;
-    border-radius: 8px;
     width: 90%;
 }
 
@@ -383,8 +326,6 @@ h6 {
     cursor: pointer;
     background-image: url('/assets/images/box-image.svg');
     background-size: cover;
-    padding: 40px;
-    height: 100%;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
@@ -440,13 +381,11 @@ h6 {
 
 .feedback-section .swiper-button {
     border: 2px solid white;
-    padding: 0;
     width: 40px;
     height: 45px;
     background-color: #F4F4F4;
     color: #06111C;
     border-radius: 100%;
-    font-size: 20px;
 }
 
 .swiper-button:hover {
@@ -465,31 +404,16 @@ h6 {
     background: #DEEBFF;
 }
 
-
-.price-cards-section .row>* {
-    padding: 0;
-}
-
 .price-cards-section .card {
     background-color: rgb(255, 255, 255);
     padding: 30px;
     border-radius: 0;
 }
 
-.price-cards-section .card-body {
-    padding: 0;
-}
-
-.price-cards-section .card-header {
-    border-bottom: 0;
-    background: transparent;
-    padding: 0;
-}
 
 .price-cards-section input {
     width: 100%;
     border: none;
-
 }
 
 .partners-section .image-wrapper {
@@ -508,9 +432,7 @@ h6 {
 }
 
 .get-started-section input[type="email"] {
-    padding: 15px;
     width: 30%;
-    border-radius: 5px;
     border: 2px transparent;
 }
 
@@ -524,14 +446,6 @@ footer {
 
 }
 
-.footer-logo {
-    justify-content: left;
-}
-
-.footer-options {
-    padding: 20px;
-}
-
 .footer-options:hover {
     background-color: rgb(52, 69, 99);
     transition: all 0.25s ease;
@@ -540,9 +454,7 @@ footer {
 footer .line {
     content: "";
     height: 0.5px;
-    width: 100%;
     background-color: rgb(80, 95, 121);
-
 }
 
 footer .footer-options .line {
@@ -555,11 +467,7 @@ footer .footer-options .line {
 }
 
 footer .fa {
-    padding: 5px;
-    font-size: 20px;
-    width: 35px;
-    text-align: center;
-    color: white;
+    width: 40px;
     border: 3px solid white;
     border-radius: 100%;
 }
@@ -568,14 +476,6 @@ footer .fa {
 @media screen and (max-width:991.98px) {
     h1 {
         font-size: 40px;
-    }
-
-    .mb-13 {
-        margin-bottom: 120px;
-    }
-
-    .pt-13 {
-        padding-top: 165px;
     }
 
     .get-started-section {
@@ -603,14 +503,6 @@ footer .fa {
         text-align: center;
     }
 
-    .mb-13 {
-        margin-bottom: 100px;
-    }
-
-    .pt-13 {
-        padding-top: 160px;
-    }
-
     .feedback-section .box-color {
         width: 100%;
         padding: 32px;
@@ -635,20 +527,9 @@ footer .fa {
         font-size: 20px;
     }
 
-    .fs-20 {
-        font-size: 18px;
-    }
 
-    .pt-6 {
+    .pt-7 {
         padding-top: 60px;
-    }
-
-    .pt-13 {
-        padding-top: 50px;
-    }
-
-    .mb-13 {
-        margin-bottom: 60px;
     }
 
     .hero-section input[type="email"] {
@@ -658,7 +539,6 @@ footer .fa {
     .work-section .card {
         left: 0;
         width: 100%;
-        padding: 10px;
     }
 
     .work-section .image-wrapper {
@@ -669,9 +549,6 @@ footer .fa {
         display: none;
     }
 
-    .workflow-section .card {
-        padding: 25px;
-    }
 
     .feature-section .card {
         width: auto;
@@ -679,15 +556,12 @@ footer .fa {
 
 
     .feedback-section .box-color {
-        width: 100%;
-        padding: 30px;
         border-top-right-radius: 0;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
 
     .feedback-section .box {
-        padding: 30px;
         border-bottom-left-radius: 0;
     }
 
@@ -695,13 +569,6 @@ footer .fa {
         left: 0%;
     }
 
-    div .box-color h2 {
-        font-size: 24px;
-    }
-
-    .price-cards-section {
-        padding: 10px;
-    }
 
     .price-cards-section .card {
         margin-bottom: 10px;
@@ -715,14 +582,6 @@ footer .fa {
 
     .get-started-section {
         background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
-    }
-
-    .get-started-section input[type="email"] {
-        display: none;
-    }
-
-    footer .footer-options .line {
-        display: block;
     }
 
     .footer-option {

@@ -24,14 +24,12 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--Custom Stylesheet-->
     <link rel="stylesheet" href="/assets/css/main.css">
-<!-- Custom js -->
-<link href="/assets/main.js">
     <title>Manage Your Teams | Trello</title>
 </head>
 
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top p-0 bg-white">
         <div class="container">
             <!--Logo-->
             <a class="d-flex align-items-center p-3" href="#">
@@ -96,7 +94,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button"
+                        <a class="nav-link d-flex align-items-center dropdown-toggle gap-1 fw-500" href="#" id="featuresDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Features
                         </a>
@@ -225,7 +223,7 @@
 
 
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button"
+                        <a class="nav-link d-flex align-items-center dropdown-toggle gap-1 fw-500" href="#" id="solutionsDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Solutions
                         </a>
@@ -370,7 +368,7 @@
                     </div>
 
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="plansDropdown" role="button"
+                        <a class="nav-link d-flex align-items-center dropdown-toggle gap-1 fw-500" href="#" id="plansDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Plans
                         </a>
@@ -380,10 +378,10 @@
                         </ul>
                     </div>
 
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link d-flex align-items-center gap-1 fw-500" href="#">Pricing</a>
 
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+                        <a class="nav-link d-flex align-items-center dropdown-toggle gap-1" href="#" id="resourcesDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Resources
                         </a>
@@ -395,7 +393,7 @@
                 </div>
 
                 <!-- toggle buttons -->
-                <div class="nav-button d-lg-none text-center"> <!-- Hide on larger screens -->
+                <div class="nav-button d-lg-none text-center "> <!-- Hide on larger screens -->
                     <a class="btn bg-transparent">Log in</a>
                     <a class="btn btn-primary">Get Trello for free</a>
                 </div>
@@ -404,16 +402,16 @@
 
             <!-- Buttons for larger screens -->
             <div class="nav-button d-none d-lg-flex"> <!-- Hide on smaller screens -->
-                <a class="btn bg-transparent">Log in</a>
-                <a class="btn btn-primary ">Get Trello for free</a>
+                <a class="btn bg-transparent p-4 rounded-0">Log in</a>
+                <a class="btn btn-primary p-4  rounded-0">Get Trello for free</a>
             </div>
 
         </div>
     </nav>
     <!--Headline section-->
-    <section class="head-line section pt-6">
-        <div class="">
-            <div class="row flex-lg-column">
+    <section class="head-line section pt-7">
+        <div class="container-fluid">
+            <div class="row ">
                 <div class="col-12">
                     <div class="bg-lightblue p-3">
                         <h6 class="fs-6 text-center pt-2">Accelerate your
@@ -428,24 +426,27 @@
     <!-- hero-section -->
     <section class="hero-section ">
         <div class="container py-9">
-            <div class="row flex-column flex-md-row align-items-center">
-                <div class="col-12 col-lg-5">
+            <div class="row flex-column flex-md-row justify-content-center align-items-center">
+                <div class="col-12 col-lg-6">
                     <h1 class="text-center text-lg-start">
                         Trello brings all your tasks, teammates, and tools together</h1>
-                    <p class="fs-20 mt-3 ">Keep everything in the
+                    <p class="fs-20 mt-3  text-center text-lg-start">Keep everything in the
                         same place—even if your team isn’t.
                     </p>
-                    <div class="d-flex flex-column flex-sm-row flex-wrap  mt-5 gap-3">
-                        <input type="email" name="email" placeholder="Email">
+                    <div class="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start  mt-5 gap-3">
+                        <input type="email" name="email" placeholder="Email" class=" rounded-1 w-50 p-3">
                         <button class="btn btn-primary"> Sign up - Its free </button>
                     </div>
-                    <div class="text-center text-lg-start py-9 ">
-                        <a class="d-inline-flex btn bg-transparent text-white fs-6" href=""><span class=""> Watch vedio
-                            </span><i class="bi bi-play-circle"></i></a>
+                    <div class="text-center text-lg-start pt-4">
+                        <!-- Button trigger modal -->
+                        <a class="d-inline-flex btn bg-transparent text-white fs-6" href="#" data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <span>Watch video</span>
+                            <i class="bi bi-play-circle"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-7">
-                    <div class="d-flex position-relative mt-4 ">
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex mt-4 ">
                         <img src="/assets/images/hero-section.webp" alt="">
                     </div>
                 </div>
@@ -473,14 +474,14 @@
                     <div class="swiper-container gallery-thumbs">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="box active mt-3" data-index="0" onclick="showImage(0), toggleActive(this)">
-                                    <h6 class="fw-500">Boards</h6>
+                                <div class="box d-block rounded-1 active mt-3" data-index="0" onclick="showImage(0), toggleActive(this)">
+                                    <h6 class="fw-semibold">Boards</h6>
                                     <p class="mt-2">Trello boards keep tasks organized and work moving forward. In a
                                         glance, see everything from “things to do” to “aww yeah, we did it!”</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="box mt-2" data-index="1" onclick="showImage(1), toggleActive(this)">
+                                <div class="box d-block  rounded-1 mt-2" data-index="1" onclick="showImage(1), toggleActive(this)">
                                     <h6 class="fw-500">Lists</h6>
                                     <p class="mt-2">The different stages of a task. Start as simple as To Do, Doing or
                                         Done—or build a workflow custom fit to your team’s needs. There’s no wrong way
@@ -488,7 +489,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="box mt-2" data-index="2" onclick="showImage(2), toggleActive(this)">
+                                <div class="box d-block mt-2 rounded-1" data-index="2" onclick="showImage(2), toggleActive(this)">
                                     <h6 class="fw-500">Cards</h6>
                                     <p class="mt-2">Cards represent tasks and ideas and hold all the information to get
                                         the job done. As you make progress, move cards across lists to show their
@@ -521,7 +522,7 @@
     <section class="workflow-section">
         <div class="container py-5">
             <div class="row">
-                <div class="col">
+                <div class="col-12">
                     <h6 class="fw-500">TRELLO IN ACTION</h6>
                     <h2 class="mt-3">Workflows for any project, big or small</h2>
                 </div>
@@ -529,8 +530,8 @@
             <!--swiper-->
             <div class="swiper-container firstswiper">
                 <div class="d-flex justify-content-end mt-5 ">
-                    <button class="swiper-button previous"> <i class="fas fa-chevron-left"></i> </button>
-                    <button class="swiper-button next"><i class="fas fa-chevron-right"></i> </button>
+                    <button class="swiper-button previous p-0"> <i class="fas fa-chevron-left"></i> </button>
+                    <button class="swiper-button next p-0"><i class="fas fa-chevron-right"></i> </button>
                 </div>
                 <div class="swiper-wrapper mt-3">
                     <div class="swiper-slide d-flex">
@@ -553,7 +554,7 @@
                                 empowering, and dare we say—fun.</p>
                         </div>
                     </div>
-                    <div class="swiper-slide d-flex justify-content-between">
+                    <div class="swiper-slide d-flex">
                         <div class="card border-top-50 green-top-border">
                             <div class="icons">
                                 <img src="/assets/images/Leaf icon.png" alt="">
@@ -600,7 +601,7 @@
                         <input type="range" name="" id="progressbar">
                     </div>
                 </div>
-                <div class="row flex-row pt-6 gap-3 ">
+                <div class="row flex-row pt-7 gap-3 ">
                     <div class="col-12 col-lg-9">
                         <h4 class="fs-20">No need to start from scratch. Jump-start your workflow with a proven playbook
                             designed for different teams. Customize it to make it yours.</h4>
@@ -625,8 +626,7 @@
                 </div>
             </div>
 
-            <div
-                class="card row flex-lg-row-reverse flex-column-reverse justify-content-between align-items-center my-5">
+            <div class="row card flex-lg-row-reverse flex-column-reverse justify-content-between align-items-center my-5 p-2 p-lg-4">
                 <div class="col-12 col-lg-6">
                     <div class="">
                         <h3 class="fs-6 fw-semibold mt-3"><svg fill="currentColor" aria-hidden="true"
@@ -634,8 +634,7 @@
                                 <path
                                     d="M6 5.333h9.333a3.333 3.333 0 0 1 0 6.667H6a3.333 3.333 0 0 1 0-6.667Zm9.333 4a.667.667 0 0 0 0-1.333H6a.667.667 0 0 0 0 1.333h9.333Zm-6.666 4H18A3.333 3.333 0 1 1 18 20H8.667a3.333 3.333 0 0 1 0-6.667Zm9.333 4A.667.667 0 0 0 18 16H8.667a.667.667 0 0 0 0 1.333H18Zm6.667 4h-9.334a3.333 3.333 0 1 0 0 6.667h9.334a3.333 3.333 0 0 0 0-6.667Zm-9.334 4a.667.667 0 0 1 0-1.333h9.334a.667.667 0 1 1 0 1.333h-9.334Zm8-20H26A3.333 3.333 0 1 1 26 12h-2.667a3.333 3.333 0 1 1 0-6.667Zm2.667 4A.667.667 0 1 0 26 8h-2.667a.667.667 0 1 0 0 1.333H26Z">
                                 </path>
-                            </svg>
-                            HIT DEADLINES EVERY TIME</h3>
+                            </svg> HIT DEADLINES EVERY TIME</h3>
                     </div>
                     <div class="">
                         <p class="fs-20 mt-4">
@@ -656,7 +655,7 @@
                 </div>
             </div>
             <!--Seceond card-->
-            <div class="card row flex-lg-row-reverse flex-column-reverse justify-content-between align-items-center">
+            <div class="row card flex-lg-row-reverse flex-column-reverse justify-content-between align-items-center p-2 p-lg-4">
                 <div class="col-12 col-lg-6">
 
                     <h3 class="fs-6 fw-semibold pt-4">
@@ -664,8 +663,7 @@
                             <path
                                 d="M6.66 6.667h18.68A2.66 2.66 0 0 1 28 9.325v16.016A2.659 2.659 0 0 1 25.34 28H6.66A2.66 2.66 0 0 1 4 25.341V9.325a2.659 2.659 0 0 1 2.66-2.658ZM6.667 12v12A1.333 1.333 0 0 0 8 25.333h16A1.333 1.333 0 0 0 25.333 24V12H6.667ZM8 5.333a1.333 1.333 0 0 1 2.667 0v1.334H8V5.333Zm13.333 0a1.333 1.333 0 0 1 2.667 0v1.334h-2.667V5.333Zm-12 12v-2.668H12v2.668H9.333Zm10.667 0v-2.668h2.667v2.668H20Zm-5.333 0v-2.668h2.668v2.668h-2.668Zm-5.334 5.334V20H12v2.667H9.333Zm5.334 0V20h2.668v2.667h-2.668Zm5.333 0V20h2.667v2.667H20Z">
                             </path>
-                        </svg>STAY ON TOP OF TASKS
-                    </h3>
+                        </svg>STAY ON TOP OF TASK</h3>
 
                     <div class="">
                         <p class="fs-20 pt-4">
@@ -690,7 +688,7 @@
     </section>
     <!-- feature section -->
     <section class="feature-section">
-        <div class="container py-12 ">
+        <div class="container pt-12 ">
             <div class="row">
                 <div class="col-12 col-lg-7">
                     <h6 class="fw-500">POWERFUL WAYS TO GROW</h6>
@@ -701,16 +699,14 @@
             </div>
 
 
-            <div class="row row-cols-1 justify-content-center row-cols-md-2 row-cols-lg-3 mt-5">
-                <div class="col  mb-3 mb-md-4 ">
-                    <div class="card p-3 p-sm-4 d-flex ">
-                        <div class="d-flex align-items-center justify-content-between">
+            <div class="row mt-5">
+                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
+                    <div class="card p-3 p-sm-4 rounded-2">
+                        <div class="d-flex flex-column align-item-center justify-content-between text-left">
                             <div class="image-wrapper">
                                 <img src="/assets/images/Integrations_Puzzle.svg" alt="Integreation">
                             </div>
-                        </div>
-                        <div>
-                            <h4 class="mt-3 fw-semi-bold">Integreations</h4>
+                            <h4 class="mt-3 fw-semi-bold ">Integreations</h4>
                             <p class="mt-3">
                                 Connect the apps your team already uses into
                                 your Trello workflow or add a Power-Up to
@@ -722,14 +718,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mb-3 mb-md-4 ">
-                    <div class="card p-3 p-sm-4 d-flex ">
-                        <div class="d-flex align-items-center justify-content-between">
+                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
+                    <div class="card p-3 p-sm-4 rounded-2">
+                        <div class="d-flex flex-column align-item-center justify-content-between">
                             <div class="image-wrapper">
                                 <img src="/assets/images/automation-feature.svg" alt="">
                             </div>
-                        </div>
-                        <div>
                             <h4 class="mt-3 fw-semi-bold">Buttler Automation</h4>
                             <p class="mt-3">
                                 No-code automation is built into every Trello board.
@@ -741,14 +735,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mb-3 mb-md-4 ">
-                    <div class="card p-3  p-sm-4 d-flex ">
-                        <div class="d-flex align-items-center justify-content-between">
+                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
+                    <div class="card p-3 p-sm-4 rounded-2">
+                        <div class="d-flex flex-column align-item-center justify-content-between">
                             <div class="image-wrapper">
                                 <img src="/assets/images/Search-feature.svg" alt="">
                             </div>
-                        </div>
-                        <div class="">
                             <h4 class="mt-3">Trello Enterprise</h4>
                             <p class=" mt-3">
                                 The productivity tool
@@ -771,18 +763,18 @@
                     <div>
                         <a class="swiper-pagination"></a>
                     </div>
-                    <button class="swiper-button previous">
+                    <button class="swiper-button previous p-0 fs-5">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button class="swiper-button next text-dark">
+                    <button class="swiper-button next text-dark p-0 fs-5">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
                 <div class="swiper-wrapper mt-4">
                     <!--First box-->
                     <div class="swiper-slide d-flex flex-wrap flex-column flex-lg-row h-100 ">
-                        <div class="col-12 col-lg-7 col-md-10">
-                            <div class="box d-flex flex-column h-100 justify-content-between ">
+                        <div class="col-12 col-md-10 col-lg-7">
+                            <div class="box d-flex flex-column h-100 justify-content-between p-3 p-lg-5 ">
                                 <div class="">
                                     <h4 class="">[Trello is] great for simplifying complex processes. As a
                                         manager, I can chunk [processes] down
@@ -803,9 +795,9 @@
 
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4 col-md-10">
+                        <div class="col-12 col-md-10 col-lg-4">
                             <div class=" box-color d-flex flex-column h-100 justify-content-between ">
-                                <h2 class="text-white fs-32">75% of organizations report that
+                                <h2 class="text-white fs-2">75% of organizations report that
                                     Trello delivers value to their business within 30 days.</h2>
 
                                 <div class="pt-3">
@@ -818,8 +810,8 @@
                     </div>
                     <!--Seceond box-->
                     <div class="swiper-slide d-flex flex-wrap flex-column flex-lg-row h-100 ">
-                        <div class="col-12 col-lg-7 col-md-10">
-                            <div class="box d-flex flex-column h-100 justify-content-between">
+                        <div class="col-12 col-md-10 col-lg-7">
+                            <div class="box d-flex flex-column h-100 justify-content-between p-3 p-lg-5">
                                 <!--this flex is for adding justify-content-between-->
                                 <h4 class="">Whether someone is in the office, working from home, or working on-site
                                     with a client,
@@ -840,7 +832,7 @@
                         </div>
                         <div class="col-12 col-lg-4 col-md-10">
                             <div class="box-color d-flex flex-column h-100 justify-content-between">
-                                <h2 class="text-white fs-32">81% of customers chose Trello for its ease of use.</h2>
+                                <h2 class="text-white fs-2">81% of customers chose Trello for its ease of use.</h2>
 
                                 <div class="pt-3">
                                     <a href="" class="text-white ">Trello Tech Validate Survey</a>
@@ -852,8 +844,8 @@
                     </div>
                     <!--Third box-->
                     <div class="swiper-slide d-flex flex-wrap h-100">
-                        <div class=" col-12 col-lg-7 col-md-10">
-                            <div class="box d-flex flex-column justify-content-between h-100">
+                        <div class=" col-12 col-md-10 col-lg-7">
+                            <div class="box d-flex flex-column justify-content-between h-100 p-3 p-lg-5">
                                 <h4 class="">Whether someone is in the office, working from home, or working on-site
                                     with a client,
                                     everyone can share context and information through Trello.
@@ -871,9 +863,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4 col-md-10">
+                        <div class="col-12 col-md-10 col-lg-4">
                             <div class="box-color d-flex flex-column h-100 justify-content-between">
-                                <h2 class="text-white fs-32">75% of organizations report that
+                                <h2 class="text-white fs-2">75% of organizations report that
                                     Trello delivers value to their business within 30 days.</h2>
 
                                 <div class="pt-3">
@@ -901,15 +893,15 @@
             </div>
             <div class="row row-gap-2 pt-5 ">
                 <!--First card-->
-                <div class="col-12 col-lg-3">
-                    <div class="card card-wrapper justify-content-between h-100 ">
-                        <div class="card-header ">
+                <div class="col-12 col-md-6 col-lg-3 px-0">
+                    <div class="card card-wrapper justify-content-between h-100 rounded-0 ">
+                        <div class="card-header bg-transparent border-0 p-0 ">
                             <h6 class="fw-semibold">Free</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-48"> 0 </span> USD</h4>
-                            <h6 class="fs-15">Free for your whole team</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-1"> 0 </span> USD</h4>
+                            <h6 class="fw-normal">Free for your whole team</h6>
                         </div>
-                        <div class="card-body ">
-                            <p class="pt-6">For indiviuals or Teams looking to organize any project</p>
+                        <div class="card-body p-0">
+                            <p class="pt-7">For indiviuals or Teams looking to organize any project</p>
                         </div>
                         <div class="card-button mt-5 mt-lg-3">
                             <a href="" class="btn btn-seceondary ">Get Started</a>
@@ -920,14 +912,14 @@
                     </div>
                 </div>
                 <!--Seceond card-->
-                <div class="col-12 col-lg-3">
-                    <div class="card card-wrapper justify-content-between h-100 ">
-                        <div class="card-header">
+                <div class="col-12 col-md-6 col-lg-3 px-0">
+                    <div class="card card-wrapper justify-content-between h-100  rounded-0 ">
+                        <div class="card-header bg-transparent border-0 p-0">
                             <h6 class="fw-semibold">Standard</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-48"> 5 </span> USD</h4>
-                            <h6 class="fs-15">Per user/month if billed annually ($6 billed monthly)</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-1"> 5 </span> USD</h4>
+                            <h6 class="fw-normal">Per user/month if billed annually ($6 billed monthly)</h6>
                         </div>
-                        <div class="card-body pt-5">
+                        <div class="card-body pt-5 p-0">
                             <p class="">For small teams that need to manage work and scale collaboration.</p>
                         </div>
                         <div class="card-button mt-5 mt-lg-3">
@@ -940,14 +932,14 @@
                     </div>
                 </div>
                 <!--third card-->
-                <div class="col-12 col-lg-3">
-                    <div class="card card-wrapper justify-content-between h-100">
-                        <div class="card-header ">
+                <div class="col-12 col-md-6 col-lg-3 px-0">
+                    <div class="card card-wrapper justify-content-between h-100 rounded-0">
+                        <div class="card-header bg-transparent border-0 p-0 ">
                             <h6 class="fw-semibold">Premium</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-48"> 10 </span> USD</h4>
-                            <h6 class="fs-15">Per user/month if billed annually ($12.50 billed monthly)</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-1"> 10 </span> USD</h4>
+                            <h6 class="fw-normal">Per user/month if billed annually ($12.50 billed monthly)</h6>
                         </div>
-                        <div class="card-body pt-5">
+                        <div class="card-body pt-5 p-0">
                             <p class="">For teams that need to track and visualize multiple projects in several
                                 ways, including boards, timelines, calendars, etc.</p>
                         </div>
@@ -960,14 +952,14 @@
                     </div>
                 </div>
                 <!--fourth card-->
-                <div class="col-12 col-lg-3 ">
-                    <div class="card card-wrapper justify-content-between h-100 ">
-                        <div class="card-header">
+                <div class="col-12 col-md-6 col-lg-3 px-0">
+                    <div class="card card-wrapper justify-content-between h-100 rounded-0 ">
+                        <div class="card-header bg-transparent border-0 p-0">
                             <h6 class="fw-semibold">Enterprise</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-48 price">17.50</span> USD</h4>
-                            <h6 class="fs-15">Per user/month - billed annually ($210.00 annual price per user)</h6>
+                            <h4 class="mt-3 fs-6">$ <span class="fs-1 price">17.50</span> USD</h4>
+                            <h6 class="fw-normal">Per user/month - billed annually ($210.00 annual price per user)</h6>
                         </div>
-                        <div class="card-body pt-5">
+                        <div class="card-body pt-5 p-0">
                             <p class="">For organizations that need to connect work across teams with more
                                 security and controls</p>
                             <div>
@@ -997,7 +989,7 @@
             <div class="row ">
                 <div class="col-12">
                     <h3 class="text-center">Join over 2,000,000 worldwide that are using trello to get more done.</h3>
-                    <div class="d-flex flex-wrap justify-content-center align-items-center pt-6 gap-5">
+                    <div class="d-flex flex-wrap justify-content-center align-items-center pt-5 gap-5">
                         <div class="image-wrapper">
                             <a href="#"><img src="/assets/images/visa-logo.png"></a>
                         </div>
@@ -1030,7 +1022,7 @@
                 <div class="col-12">
                     <h2 class="text-center">Get Started With Trello Today</h2>
                     <div class="d-flex flex-column flex-sm-row flex-wrap justify-content-center mt-3 gap-3">
-                        <input type="email" name="email" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email" class="rounded-1 p-3 d-none d-md-flex">
                         <button class="btn btn-primary"> Sign up - Its free </button>
                     </div>
                 </div>
@@ -1042,7 +1034,7 @@
         <div class="container-fluid pt-5">
             <div class="row justify-content-center align-items-center column-gap-3 row-gap-1">
                 <div class="col-12 col-lg-2 ">
-                    <div class="footer-logo ">
+                    <div class="footer-logo">
                         <!--SVG-->
                         <svg aria-label="Atlassian Trello" fill="#ffffff" height="50" role="img" viewBox="0 0 312 105"
                             width="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1109,8 +1101,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-2">
-                    <div class="footer-options">
-                        <div class="line"></div>
+                    <div class="footer-options p-3">
+                        <div class="line d-block d-lg-none"></div>
                         <h5 class="text-white fs-6 pt-4 pt-lg-0">About Trello</h5>
                         <a href="#" class="text-white  mt-2">What’s Behind the boards.</a>
 
@@ -1118,24 +1110,24 @@
 
                 </div>
                 <div class="col-12 col-lg-2">
-                    <div class="footer-options">
-                        <div class="line">
+                    <div class="footer-options p-3">
+                        <div class="line d-block d-lg-none ">
                         </div>
                         <h5 class="text-white fs-6 pt-4 pt-lg-0">Jobs</h5>
-                        <a href="#" class="text-white  mt-2">Learn about the open role in Trello team.</a>
+                        <a href="#" class="text-white mt-2">Learn about the open role in Trello team.</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-2">
-                    <div class="footer-options">
-                        <div class="line"></div>
+                    <div class="footer-options p-3">
+                        <div class="line d-block d-lg-none"></div>
                         <h5 class="text-white fs-6 pt-4 pt-lg-0">Apps</h5>
                         <a href="#" class="text-white  mt-2">Download the Trello app for your desktop and mobile
                             devices.</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-2">
-                    <div class="footer-options">
-                        <div class="line"></div>
+                    <div class="footer-options p-3">
+                        <div class="line d-block d-lg-none"></div>
                         <h5 class="text-white fs-6 pt-4 pt-lg-0">Contact us</h5>
                         <a href="#" class="text-white mt-2">Need anything? Get in touch and we can help.</a>
 
@@ -1143,7 +1135,7 @@
                 </div>
             </div>
 
-            <div class="line my-3 ">
+            <div class="line my-3 w-100 ">
 
             </div>
             <div class="container py-5 ">
@@ -1177,11 +1169,11 @@
                     </div>
                     <div class="col-12 col-lg-5">
                         <div class="d-flex flex-wrap justify-content-lg-end mt-5 mt-lg-0  gap-4">
-                            <a href="" class="fa fa-instagram "></a>
-                            <a href="" class="fa fa-linkedin "></a>
-                            <a href="" class="fa fa-twitter "></a>
-                            <a href="" class="fa fa-youtube "></a>
-                            <a href="" class="fa fa-facebook"></a>
+                            <a href="" class="fa fa-instagram text-center text-white fs-5 p-2"></a>
+                            <a href="" class="fa fa-linkedin text-center text-white fs-5 p-2"></a>
+                            <a href="" class="fa fa-twitter text-center text-white fs-5 p-2"></a>
+                            <a href="" class="fa fa-youtube text-center text-white fs-5 p-2"></a>
+                            <a href="" class="fa fa-facebook text-center text-white fs-5 p-2"></a>
                         </div>
                     </div>
                 </div>
@@ -1198,88 +1190,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--Swiper js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-   <script>// Vertical Thumbnail section JS
-    function showImage(index) {
-        galleryTop.slideTo(index);
-    }
-    
-    function toggleActive(element) {
-        var boxes = document.querySelectorAll('.box');
-        boxes.forEach(function (box) {
-            box.classList.remove('active');
-        });
-        element.classList.add('active');
-    }
-    
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 10,
-        slidesPerView: 'auto',
-        direction: '',
-    });
-    
-    var galleryTop = new Swiper('.gallery-top', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        thumbs: {
-            swiper: {
-                el: '.gallery-thumbs',
-                slidesPerView: 'auto',
-                direction: 'vertical',
-                spaceBetween: 10,
-                breakpoints: {
-                    1200: {
-                        direction: 'vertical',
-                    },
-                    768: {
-                        direction: 'vertical',
-                    },
-                    320: {
-                        direction: 'horizontal'
-                    }
-                }
-            }
-        },
-        on: {
-            slideChangeTransitionStart: function () {
-                var activeIndex = this.realIndex;
-                var boxes = document.querySelectorAll('.box');
-                boxes.forEach(function (box) {
-                    box.classList.remove('active');
-                });
-                var activeBox = document.querySelector('.box[data-index="' + activeIndex + '"]');
-                activeBox.classList.add('active');
-            }
-        }
-    });
-    
-    function updateActiveBox() {
-        var activeIndex = galleryTop.realIndex;
-        var boxes = document.querySelectorAll('.box');
-        boxes.forEach(function (box) {
-            box.classList.remove('active');
-        });
-        var activeBox = document.querySelector('.box[data-index="' + activeIndex + '"]');
-        activeBox.classList.add('active');
-    }
-    
-    galleryTop.on('resize', function () {
-        if (window.innerWidth < 768) {
-            galleryTop.thumbs.swiper.params.direction = 'horizontal';
-            updateActiveBox();
-        } else {
-            galleryTop.thumbs.swiper.params.direction = 'vertical';
-        }
-        galleryTop.thumbs.swiper.update();
-    });
-    
-    // Initial call to update active box on page load
-    updateActiveBox();
-    
-    
-    
-    </script>
+  
+    <script src="/assets/main.js"></script>
 </body>
 
 </html>
