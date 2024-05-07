@@ -393,7 +393,7 @@
                 </div>
 
                 <!-- toggle buttons -->
-                <div class="nav-button d-lg-none text-center " > <!-- Hide on larger screens -->
+                <div class="nav-button d-lg-none text-center "> <!-- Hide on larger screens -->
                     <a class="btn bg-transparent">Log in</a>
                     <a class="btn btn-primary">Get Trello for free</a>
                 </div>
@@ -410,8 +410,8 @@
     </nav>
     <!--Headline section-->
     <section class="headline-section bg-lightblue pt-7">
-        <div class="container-fluid">
-            <div class="row ">
+        <div class="container">
+            <div class="row">
                 <div class="col-12">
                     <div class="p-3">
                         <h6 class="fs-6 text-center pt-2">Accelerate your
@@ -425,27 +425,26 @@
     </section>
     <!-- hero-section -->
     <section class="hero-section ">
-        <div class="container py-9">
-            <div class="row flex-column flex-md-row justify-content-center align-items-center">
-                <div class="col-12 col-lg-6">
+        <div class="container py-9 px-lg-0">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-lg-5">
                     <h1 class="text-center text-lg-start">
                         Trello brings all your tasks, teammates, and tools together</h1>
-                    <p class="fs-20 mt-3  text-center text-lg-start">Keep everything in the
+                    <p class="fs-20 mt-3 text-center text-lg-start">Keep everything in the
                         same place—even if your team isn’t.
                     </p>
                     <div
                         class="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start  mt-5 gap-3">
                         <input type="email" name="email" placeholder="Email" class=" rounded-1 w-50 p-3">
                         <button class="btn btn-primary"> Sign up - Its free </button>
-                    </div>
-                    <div class="text-center text-lg-start pt-4">
-                        <a class="d-inline-flex btn bg-transparent text-white fs-6" href="#">
+                        <a class="d-flex justify-content-center justify-content-lg-start align-items-center text-white fs-6 gap-2 text-center text-lg-start pt-4 text-decoration-none "
+                            href="#">
                             <span>Watch video</span>
-                            <i class="bi bi-play-circle"></i>
+                            <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m5 5h14v14h-14z"></path><path clip-rule="evenodd" d="m10.0138 16.3878c-.83597.4912-1.5138.105-1.5138-.8645v-7.04491c0-.97008.6755-1.358 1.5138-.86566l6.465 3.79747c.5548.3261.5589.8517 0 1.1801z" fill="currentColor" fill-rule="evenodd"></path><circle cx="12" cy="12" r="11.5" stroke="currentColor"></circle></svg>
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-7">
                     <div class="d-flex mt-4 ">
                         <img src="/assets/images/hero-section.webp" alt="">
                     </div>
@@ -531,12 +530,12 @@
                 </div>
             </div>
             <!--swiper-->
-            <div class="swiper-container firstswiper">
-                <div class="d-flex justify-content-end mt-5 ">
+            <div class="swiper-container firstswiper py-4">
+                <div class="d-flex justify-content-end mt-4 ">
                     <button class="swiper-button previous p-0"> <i class="fas fa-chevron-left"></i> </button>
                     <button class="swiper-button next p-0"><i class="fas fa-chevron-right"></i> </button>
                 </div>
-                <div class="swiper-wrapper mt-3">
+                <div class="swiper-wrapper py-4">
                     <div class="swiper-slide d-flex">
                         <div class="card border-top-50 red-top-border ">
                             <div class="icons">
@@ -604,12 +603,12 @@
                         <input type="range" name="" id="progressbar">
                     </div>
                 </div>
-                <div class="row flex-row pt-7 gap-3 ">
+                <div class="row flex-row pt-4 gap-3 ">
                     <div class="col-12 col-lg-9">
                         <h4 class="fs-20">No need to start from scratch. Jump-start your workflow with a proven playbook
                             designed for different teams. Customize it to make it yours.</h4>
                     </div>
-                    <div class="col-12">
+                    <div>
                         <a class=" btn btn-seceondary ">Explore all the use cases </a>
                     </div>
                 </div>
@@ -620,7 +619,7 @@
         <div class="container py-9">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-white text-center pt-5">See work in a whole new way</h2>
+                    <h2 class="text-white text-center">See work in a whole new way</h2>
                     <p class="fs-20 text-white text-center pt-2">View your team’s projects from every angle and bring a
                         fresh perspective to the task at hand.</p>
                     <div class=" d-flex justify-content-center align-items-end">
@@ -628,20 +627,22 @@
                     </div>
                 </div>
             </div>
-
             <div
-                class="row card flex-lg-row-reverse flex-column-reverse justify-content-between align-items-center my-5 p-2 p-lg-4">
+                class="row card flex-lg-row flex-column justify-content-between align-items-center my-5 row-gap-3 p-3 p-lg-5">
+                <div class="col-12 col-lg-6 ">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/work-section1.png" class="img-fluid">
+                    </div>
+                </div>
                 <div class="col-12 col-lg-6">
                     <div class="">
-                        <h3 class="fs-6 fw-semibold mt-3"><svg fill="currentColor" aria-hidden="true"
-                                viewBox="0 0 32 32" width="24" height="24">
+                        <h3 class=" d-flex gap-2 fs-6 text-lg-start fw-semibold"><svg class="d-none d-lg-inline"
+                                fill="currentColor" aria-hidden="true" viewBox="0 0 32 32" width="24" height="24">
                                 <path
                                     d="M6 5.333h9.333a3.333 3.333 0 0 1 0 6.667H6a3.333 3.333 0 0 1 0-6.667Zm9.333 4a.667.667 0 0 0 0-1.333H6a.667.667 0 0 0 0 1.333h9.333Zm-6.666 4H18A3.333 3.333 0 1 1 18 20H8.667a3.333 3.333 0 0 1 0-6.667Zm9.333 4A.667.667 0 0 0 18 16H8.667a.667.667 0 0 0 0 1.333H18Zm6.667 4h-9.334a3.333 3.333 0 1 0 0 6.667h9.334a3.333 3.333 0 0 0 0-6.667Zm-9.334 4a.667.667 0 0 1 0-1.333h9.334a.667.667 0 1 1 0 1.333h-9.334Zm8-20H26A3.333 3.333 0 1 1 26 12h-2.667a3.333 3.333 0 1 1 0-6.667Zm2.667 4A.667.667 0 1 0 26 8h-2.667a.667.667 0 1 0 0 1.333H26Z">
                                 </path>
                             </svg> HIT DEADLINES EVERY TIME</h3>
-                    </div>
-                    <div class="">
-                        <p class="fs-20 mt-4">
+                        <p class="fs-20 pt-4">
                             From weekly sprints to annual planning, Timeline view keeps all tasks on track. Quickly get
                             a
                             glimpse of what’s coming down
@@ -652,41 +653,32 @@
                         <a class="fs-20">Learn more about Timeline view</a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 ">
-                    <div class="image-wrapper">
-                        <img src="/assets/images/work-section1.png" alt="">
-                    </div>
-                </div>
             </div>
             <!--Seceond card-->
             <div
-                class="row card flex-lg-row-reverse flex-column-reverse justify-content-between align-items-center p-2 p-lg-4">
+                class="row card flex-lg-row flex-column-reverse justify-content-between align-items-center p-3 p-lg-5 row-gap-4">
                 <div class="col-12 col-lg-6">
-
-                    <h3 class="fs-6 fw-semibold pt-4">
-                        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 32 32" width="24" height="24">
+                    <h3 class=" d-flex gap-2 align-items-center fs-6 fw-semibold ">
+                        <svg class="d-none d-lg-inline" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"
+                            width="24" height="24">
                             <path
                                 d="M6.66 6.667h18.68A2.66 2.66 0 0 1 28 9.325v16.016A2.659 2.659 0 0 1 25.34 28H6.66A2.66 2.66 0 0 1 4 25.341V9.325a2.659 2.659 0 0 1 2.66-2.658ZM6.667 12v12A1.333 1.333 0 0 0 8 25.333h16A1.333 1.333 0 0 0 25.333 24V12H6.667ZM8 5.333a1.333 1.333 0 0 1 2.667 0v1.334H8V5.333Zm13.333 0a1.333 1.333 0 0 1 2.667 0v1.334h-2.667V5.333Zm-12 12v-2.668H12v2.668H9.333Zm10.667 0v-2.668h2.667v2.668H20Zm-5.333 0v-2.668h2.668v2.668h-2.668Zm-5.334 5.334V20H12v2.667H9.333Zm5.334 0V20h2.668v2.667h-2.668Zm5.333 0V20h2.667v2.667H20Z">
                             </path>
                         </svg>STAY ON TOP OF TASK
                     </h3>
-
-                    <div class="">
-                        <p class="fs-20 pt-4">
-                            Start each day without any surprises. Whether scheduling an editorial calendar or staying on
-                            top
-                            of to-dos, Calendar view
-                            is like a crystal ball giving you a clear vision of what work lies ahead.
-                        </p>
-                    </div>
-
+                    <p class="fs-20 pt-4">
+                        Start each day without any surprises. Whether scheduling an editorial calendar or staying on
+                        top
+                        of to-dos, Calendar view
+                        is like a crystal ball giving you a clear vision of what work lies ahead.
+                    </p>
                     <div class="d-flex justify-content-between align-items-end pt-3">
                         <a class="fs-20">Learn more about calender view</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="image-wrapper">
-                        <img src="/assets/images/work-section2.png" alt="">
+                        <img src="/assets/images/work-section2.png" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -703,17 +695,15 @@
                         ability to quickly set up and customize workflows for just about anything.</p>
                 </div>
             </div>
-
-
-            <div class="row mt-5">
+            <div class="row py-5">
                 <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
                     <div class="card p-3 p-sm-4 rounded-2">
-                        <div class="d-flex flex-column align-item-center justify-content-between text-left">
+                        <div class="d-flex flex-column align-item-center justify-content-between text-left gap-3">
                             <div class="image-wrapper">
                                 <img src="/assets/images/Integrations_Puzzle.svg" alt="Integreation">
                             </div>
-                            <h4 class="mt-3 fw-semi-bold ">Integreations</h4>
-                            <p class="mt-3">
+                            <h4 class="fw-semi-bold ">Integreations</h4>
+                            <p class="">
                                 Connect the apps your team already uses into
                                 your Trello workflow or add a Power-Up to
                                 fine-tune your specific needs.
@@ -726,34 +716,34 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
                     <div class="card p-3 p-sm-4 rounded-2">
-                        <div class="d-flex flex-column align-item-center justify-content-between">
+                        <div class="d-flex flex-column align-item-center justify-content-between gap-3">
                             <div class="image-wrapper">
                                 <img src="/assets/images/automation-feature.svg" alt="">
                             </div>
-                            <h4 class="mt-3 fw-semi-bold">Buttler Automation</h4>
-                            <p class="mt-3">
+                            <h4 class="fw-semi-bold">Buttler Automation</h4>
+                            <p class="">
                                 No-code automation is built into every Trello board.
                                 Focus on the work that matters most and let the robots do the rest.
                             </p>
                         </div>
-                        <div class="d-flex align-items-end">
-                            <a class="btn btn-seceondary mt-4">Get to Know Automation</a>
+                        <div class="d-flex align-items-end pt-4">
+                            <a class="btn btn-seceondary">Get to Know Automation</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
                     <div class="card p-3 p-sm-4 rounded-2">
-                        <div class="d-flex flex-column align-item-center justify-content-between">
+                        <div class="d-flex flex-column align-item-center justify-content-between gap-3">
                             <div class="image-wrapper">
                                 <img src="/assets/images/Search-feature.svg" alt="">
                             </div>
-                            <h4 class="mt-3">Trello Enterprise</h4>
-                            <p class=" mt-3">
+                            <h4 class="">Trello Enterprise</h4>
+                            <p class="">
                                 The productivity tool
                                 teams love, paired with the features and security needed for scale. </p>
                         </div>
-                        <div class=" d-flex align-items-end">
-                            <a class="btn btn-seceondary mt-5">Explore Enterprise</a>
+                        <div class=" d-flex align-items-end pt-4">
+                            <a class="btn btn-seceondary">Explore Enterprise</a>
                         </div>
                     </div>
                 </div>
@@ -763,7 +753,6 @@
     <section class="feedback-section">
         <div class="container py-5 ">
             <div class="swiper-container seceond-swiper">
-
                 <!--navigation and pagination-->
                 <div class="d-flex justify-content-end align-items-center gap-2">
                     <div>
@@ -776,18 +765,18 @@
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
-                <div class="swiper-wrapper mt-4">
+                <div class="swiper-wrapper py-4">
                     <!--First box-->
                     <div class="swiper-slide d-flex flex-wrap flex-column flex-lg-row h-100 ">
                         <div class="col-12 col-md-10 col-lg-7">
-                            <div class="box d-flex flex-column h-100 justify-content-between p-3 p-lg-5 ">
+                            <div class="box d-flex flex-column h-100 justify-content-between p-3 p-lg-5 gap-5">
                                 <div class="">
                                     <h4 class="">[Trello is] great for simplifying complex processes. As a
                                         manager, I can chunk [processes] down
                                         into bite-sized pieces for my team and then delegate that out, but still
                                         keep a bird's-eye veiw. </h4>
                                 </div>
-                                <div class=" pt-3">
+                                <div class=" ">
                                     <p class="line"></p>
                                     <p class="mt-3">Joey Rosenberg</p>
                                     <p>Global Leadership Director at Women Who Code</p>
@@ -802,7 +791,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-10 col-lg-4">
-                            <div class=" box-color d-flex flex-column h-100 justify-content-between ">
+                            <div class=" box-color d-flex flex-column h-100 justify-content-between gap-5">
                                 <h2 class="text-white fs-2">75% of organizations report that
                                     Trello delivers value to their business within 30 days.</h2>
 
@@ -817,28 +806,65 @@
                     <!--Seceond box-->
                     <div class="swiper-slide d-flex flex-wrap flex-column flex-lg-row h-100 ">
                         <div class="col-12 col-md-10 col-lg-7">
-                            <div class="box d-flex flex-column h-100 justify-content-between p-3 p-lg-5">
-                                <!--this flex is for adding justify-content-between-->
-                                <h4 class="">Whether someone is in the office, working from home, or working on-site
-                                    with a client,
-                                    everyone can share context and information through Trello.
-                                </h4>
-                                <div class="pt-3">
-                                    <p class="line"></p>
-                                    <p class="pt-3">Sumeet Moghe</p>
-                                    <p>Product Manager at ThoughtWorks</p>
+                            <div class="box d-flex flex-column h-100 justify-content-between p-3 p-lg-5 gap-5">
+                                <div class="">
+                                    <h4 class="">Whether someone is in the office, working from home, or working on-site
+                                        with a client,
+                                        everyone can share context and information through Trello.</h4>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-end pt-3 ">
-                                    <div class="image-wrapper">
-                                        <img src="/assets/images/thoughtworks-logo.svg" alt="WomenWhoCode_logo">
+                                <div class=" ">
+                                    <p class="line"></p>
+                                    <p class="mt-3">Sumeet Moghe</p>
+                                    <p>Product Manager at ThoughtWorks</p>
+                                    <div class="d-flex justify-content-between align-items-end pt-3">
+                                        <div class="image-wrapper">
+                                            <img src="/assets/images/thoughtworks-logo.svg" alt="WomenWhoCode_logo">
+                                        </div>
+                                        <a href="" class="">Read the story</a>
                                     </div>
-                                    <a href="" class="">Read the story</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10 col-lg-4">
+                            <div class=" box-color d-flex flex-column h-100 justify-content-between gap-5">
+                                <h2 class="text-white fs-2">81% of customers chose Trello for its ease of use.</h2>
+
+                                <div class="pt-3">
+                                    <a href="" class="text-white ">Trello Tech Validate Survey</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4 col-md-10">
-                            <div class="box-color d-flex flex-column h-100 justify-content-between">
-                                <h2 class="text-white fs-2">81% of customers chose Trello for its ease of use.</h2>
+
+                    </div>
+                    <!-- third box -->
+                    <div class="swiper-slide d-flex flex-wrap flex-column flex-lg-row h-100 ">
+                        <div class="col-12 col-md-10 col-lg-7">
+                            <div class="box d-flex flex-column h-100 justify-content-between p-3 p-lg-5 gap-5">
+                                <div class="">
+                                    <h4 class="">Whether someone is in the office, working from home, or working on-site
+                                        with a client,
+                                        everyone can share context and information through Trello.
+                                    </h4>
+                                </div>
+                                <div class=" ">
+                                    <p class="line"></p>
+                                    <p class="mt-3">Sumeet Moghe</p>
+                                    <p>Product Manager at ThoughtWorks</p>
+                                    <div class="d-flex justify-content-between align-items-end pt-3">
+                                        <div class="image-wrapper">
+                                            <img src="/assets/images/ptc-logo.svg" alt="WomenWhoCode_logo">
+                                        </div>
+                                        <a href="" class="">Read the story</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10 col-lg-4">
+                            <div class=" box-color d-flex flex-column h-100 justify-content-between gap-5">
+                                <h2 class="text-white fs-2">75% of organizations report that
+                                    Trello delivers value to their business within 30 days.</h2>
 
                                 <div class="pt-3">
                                     <a href="" class="text-white ">Trello Tech Validate Survey</a>
@@ -848,56 +874,21 @@
 
 
                     </div>
-                    <!--Third box-->
-                    <div class="swiper-slide d-flex flex-wrap h-100">
-                        <div class=" col-12 col-md-10 col-lg-7">
-                            <div class="box d-flex flex-column justify-content-between h-100 p-3 p-lg-5">
-                                <h4 class="">Whether someone is in the office, working from home, or working on-site
-                                    with a client,
-                                    everyone can share context and information through Trello.
-                                </h4>
-                                <div class="pt-3">
-                                    <p class="line"></p>
-                                    <p class="pt-3">Sumeet Moghe</p>
-                                    <p>Product Manager at ThoughtWorks</p>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-end pt-3">
-                                    <div class="image-wrapper">
-                                        <img src="/assets/images/ptc-logo.svg" alt="WomenWhoCode_logo">
-                                    </div>
-                                    <a href="" class="">Read the story</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-10 col-lg-4">
-                            <div class="box-color d-flex flex-column h-100 justify-content-between">
-                                <h2 class="text-white fs-2">75% of organizations report that
-                                    Trello delivers value to their business within 30 days.</h2>
-
-                                <div class="pt-3">
-                                    <a href="" class="text-white">Trello Tech Validate Survey</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div><!--swiper slide-->
-
                 </div>
             </div>
         </div>
     </section>
     <!--Price card section-->
     <section class="price-cards-section">
-        <div class="container py-5">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="mt-5">Trello priced your way</h2>
+        <div class="container py-9">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="">Trello priced your way</h2>
                     <h5 class="text-secondary mt-2 ">Trusted by millions, Trello powers teams all around the world.</h5>
                     <a href="" class="btn btn-primary mt-4">Compare Plans</a>
                 </div>
             </div>
-            <div class="row row-gap-2 pt-5 ">
+            <div class="row row-gap-2 py-5 ">
                 <!--First card-->
                 <div class="col-12 col-md-6 col-lg-3 px-0">
                     <div class="card card-wrapper justify-content-between h-100 rounded-0 ">
@@ -1022,7 +1013,7 @@
         </div>
     </section>
     <!-- Get started section -->
-    <section class="get-started-section">
+    <section class="get-started-section p-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
@@ -1037,7 +1028,7 @@
     </section>
     <!--Footer-->
     <footer>
-        <div class="container-fluid pt-5">
+        <div class="container-fluid py-5">
             <div class="row justify-content-center align-items-center column-gap-3 row-gap-1">
                 <div class="col-12 col-lg-2 ">
                     <div class="footer-logo">

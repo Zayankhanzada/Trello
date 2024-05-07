@@ -164,7 +164,6 @@ h6 {
     border: 2px transparent;
 }
 
-
 /*productivity section*/
 
 .productivity-section {
@@ -290,20 +289,14 @@ h6 {
     color: rgb(9, 30, 66);
     border-radius: 8px;
     box-shadow: rgba(9, 30, 66, 0.15) 0px 8px 16px 0px;
-    width: 80%;
-    left: 10%;
+    /* width: 80%;
+    left: 10%; */
 }
 
 .work-section .card:last-child {
     margin-bottom: -155px;
 }
 
-.work-section .image-wrapper {
-    width: 90%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
 
 .work-section .row {
     margin-left: 0;
@@ -428,7 +421,6 @@ h6 {
     background: url(/assets/images/banner-option.svg) left center / contain no-repeat scroll padding-box border-box, url(/assets/images/banner-option2.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
     background-blend-mode: normal, normal, normal;
     color: rgb(255, 255, 255);
-    padding: 40px;
 }
 
 .get-started-section input[type="email"] {
@@ -460,7 +452,7 @@ footer .line {
 footer .footer-options .line {
     display: none;
     content: "";
-    height:1px;
+    height: 1px;
     width: 100%;
     background-color: rgb(80, 95, 121);
 
@@ -527,6 +519,9 @@ footer .fa {
         font-size: 20px;
     }
 
+    .fs-20 {
+        font-size: 18px;
+    }
 
     .pt-7 {
         padding-top: 60px;
@@ -549,6 +544,9 @@ footer .fa {
         display: none;
     }
 
+    .workflow-section .card {
+        padding: 20px;
+    }
 
     .feature-section .card {
         width: auto;
