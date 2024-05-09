@@ -20,6 +20,7 @@ img {
 
 p {
     font-size: 16px;
+    color: #091E42;
     margin: 0;
 }
 
@@ -96,6 +97,9 @@ h6 {
     font-size: 12px;
 }
 
+.fs-48{
+    font-size: 48px;
+}
 .fw-500 {
     font-weight: 500;
 }
@@ -103,6 +107,10 @@ h6 {
 /*background and colors*/
 .bg-lightblue {
     background: #DEEBFF;
+}
+
+.text-grey{
+    color: #505F79;
 }
 
 .navbar.scrolled {
@@ -122,34 +130,6 @@ h6 {
 
 .nav-link:hover {
     color: dodgerblue;
-}
-
-.mega-menu {
-    width: 80vw;
-    padding: 30px;
-}
-
-.mega-menu .line {
-    width: 50%;
-    margin-top: 20px;
-    background-color: grey;
-    height: 0.5px;
-}
-
-.mega-menu .card {
-    width: fit-content;
-    padding: 5px;
-    border: 0;
-}
-
-.mega-menu .card-header {
-    padding: 0;
-    border: 0;
-    background: none;
-}
-
-.mega-menu .card-body {
-    padding: 0;
 }
 
 /*Hero section */
@@ -172,16 +152,16 @@ h6 {
 
 .productivity-section .box {
     background: transparent;
-    padding: 16px 16px 16px 24px;
     text-align: left;
     transition: 0.1s ease;
     cursor: pointer;
+    border-left: 8px solid transparent;
 }
 
 .productivity-section .box.active {
     background: rgb(255, 255, 255);
     color: rgb(9, 30, 66);
-    border-left: 8px solid rgb(0, 199, 229);
+    border-left-color:  rgb(0, 199, 229);
     box-shadow: rgba(9, 30, 66, 0.15) 0px 13px 16px 0px;
 }
 
@@ -196,12 +176,11 @@ h6 {
 
 /*Workflow section*/
 .workflow-section .card {
-    padding: 30px;
+    padding: 25px;
     text-align: left;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
 }
-
 
 .swiper-slide {
     height: auto;
@@ -209,13 +188,12 @@ h6 {
 
 .workflow-section .icons {
     background: rgb(255, 255, 255) center center/contain no-repeat;
-    border-radius: 8px;
     border: 8px solid rgb(255, 255, 255);
     height: auto;
     left: 16px;
     position: absolute;
     top: -30px;
-    width: auto;
+    min-width: 50px;
     max-width: 50px;
 }
 
@@ -253,9 +231,8 @@ h6 {
 
 .workflow-section .swiper-button {
     border: 2px solid white;
-    padding: 0;
-    width: 40px;
-    height: 45px;
+    width: 35px;
+    height: 37px;
     background-color: #F4F4F4;
     color: #06111C;
     border-radius: 100%;
@@ -372,10 +349,10 @@ h6 {
 
 .feedback-section .swiper-button {
     border: 2px solid white;
-    width: 40px;
-    height: 45px;
+    width: 37px;
+    height: 38px;
     background-color: #F4F4F4;
-    color: #06111C;
+ 
     border-radius: 100%;
 }
 
@@ -398,13 +375,15 @@ h6 {
 .price-cards-section .card {
     background-color: rgb(255, 255, 255);
     padding: 30px;
-    border-radius: 0;
 }
 
-
+.blue-border{
+    border: 2px solid #2684FF;
+}
 .price-cards-section input {
     width: 100%;
     border: none;
+    background: transparent;
 }
 
 .partners-section .image-wrapper {

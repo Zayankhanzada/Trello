@@ -173,21 +173,22 @@
                 <div class="col-12 col-lg-5">
                     <h1 class="text-center text-lg-start">
                         Trello brings all your tasks, teammates, and tools together</h1>
-                    <p class="fs-20 mt-3 text-center text-lg-start">Keep everything in the
+                    <p class="fs-20 mt-3 text-center text-white text-lg-start">Keep everything in the
                         same place—even if your team isn’t.
                     </p>
                     <div
-                        class="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start  mt-5  gap-3 gap-sm-5">
-                        <input type="email" name="email" placeholder="Email" class=" rounded-1 w-50 p-3">
+                        class="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start  mt-5  gap-2">
+                        <input type="email" name="email" placeholder="Email" class=" rounded-1 p-3">
                         <button class="btn btn-primary"> Sign up - Its free </button>
-                     <div class="">  
+                    </div>
+                        <div class="">  
                          <a class="d-flex justify-content-center justify-content-lg-start align-items-center text-white fs-6 gap-2 text-center text-lg-start pt-4 text-decoration-none "
                             href="#">
-                            <span>Watch video</span>
+                            <span class="text-decoration-underline ">Watch video</span>
                             <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m5 5h14v14h-14z"></path><path clip-rule="evenodd" d="m10.0138 16.3878c-.83597.4912-1.5138.105-1.5138-.8645v-7.04491c0-.97008.6755-1.358 1.5138-.86566l6.465 3.79747c.5548.3261.5589.8517 0 1.1801z" fill="currentColor" fill-rule="evenodd"></path><circle cx="12" cy="12" r="11.5" stroke="currentColor"></circle></svg>
                         </a>
                     </div>
-                    </div>
+                    
                 </div>
                 <div class="col-12 col-lg-7">
                     <div class="d-flex mt-4 ">
@@ -218,7 +219,7 @@
                     <div class="swiper-container gallery-thumbs">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="box d-block rounded-1 active mt-3" data-index="0"
+                                <div class="box d-block p-4 rounded-1 active mt-3" data-index="0"
                                     onclick="showImage(0), toggleActive(this)">
                                     <h6 class="fw-semibold">Boards</h6>
                                     <p class="mt-2">Trello boards keep tasks organized and work moving forward. In a
@@ -226,18 +227,18 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="box d-block  rounded-1 mt-2" data-index="1"
+                                <div class="box d-block p-4 rounded-1 mt-2" data-index="1"
                                     onclick="showImage(1), toggleActive(this)">
-                                    <h6 class="fw-500">Lists</h6>
+                                    <h6 class="fw-semibold">Lists</h6>
                                     <p class="mt-2">The different stages of a task. Start as simple as To Do, Doing or
                                         Done—or build a workflow custom fit to your team’s needs. There’s no wrong way
                                         to Trello.</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="box d-block mt-2 rounded-1" data-index="2"
+                                <div class="box d-block mt-2 p-4 rounded-1" data-index="2"
                                     onclick="showImage(2), toggleActive(this)">
-                                    <h6 class="fw-500">Cards</h6>
+                                    <h6 class="fw-semibold">Cards</h6>
                                     <p class="mt-2">Cards represent tasks and ideas and hold all the information to get
                                         the job done. As you make progress, move cards across lists to show their
                                         status.</p>
@@ -276,14 +277,14 @@
             </div>
             <!--swiper-->
             <div class="swiper-container firstswiper py-4">
-                <div class="d-flex justify-content-end mt-4 ">
+                <div class="d-flex justify-content-end gap-2 mt-4 ">
                     <button class="swiper-button previous p-0"> <i class="fas fa-chevron-left"></i> </button>
                     <button class="swiper-button next p-0"><i class="fas fa-chevron-right"></i> </button>
                 </div>
                 <div class="swiper-wrapper py-4">
                     <div class="swiper-slide d-flex">
                         <div class="card border-top-50 red-top-border ">
-                            <div class="icons">
+                            <div class="icons rounded-2">
                                 <img src="/assets/images/folder icon.png" alt="">
                             </div>
                             <h3 class="mt-2">Project Managment</h3>
@@ -293,7 +294,7 @@
                     </div>
                     <div class="swiper-slide d-flex">
                         <div class="card border-top-50 skyblue-top-border">
-                            <div class="icons">
+                            <div class="icons rounded-2">
                                 <img src="/assets/images/megaphone icon.png" alt="meeing icon">
                             </div>
                             <h3 class="mt-2">Meetings</h3>
@@ -303,7 +304,7 @@
                     </div>
                     <div class="swiper-slide d-flex">
                         <div class="card border-top-50 green-top-border">
-                            <div class="icons">
+                            <div class="icons rounded-2">
                                 <img src="/assets/images/Leaf icon.png" alt="">
                             </div>
                             <h3 class="mt-2">Onboarding</h3>
@@ -313,7 +314,7 @@
                     </div>
                     <div class="swiper-slide d-flex">
                         <div class="card border-top-50 yellow-top-border">
-                            <div class="icons">
+                            <div class="icons rounded-2">
                                 <img src="/assets/images/checklist-icon.png" alt="">
                             </div>
                             <h3 class="mt-2">Task Managment</h3>
@@ -323,7 +324,7 @@
                     </div>
                     <div class="swiper-slide d-flex">
                         <div class="card border-top-50 blue-top-border">
-                            <div class="icons d-inline-flex justify-content-center align-items-center">
+                            <div class="icons rounded-2">
                                 <img src="/assets/images/Brainstorming-icon.svg" class="w-100  " alt="">
                             </div>
                             <h3 class="mt-3">Brainstorming</h3>
@@ -333,7 +334,7 @@
                     </div>
                     <div class="swiper-slide d-flex">
                         <div class="card border-top-50 pink-top-border">
-                            <div class="icons">
+                            <div class="icons rounded-2">
                                 <img src="/assets/images/book-icon.png" alt="">
                             </div>
                             <h3 class="mt-2">Resource Hub</h3>
@@ -381,7 +382,7 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="">
-                        <h3 class=" d-flex gap-2 fs-6 text-lg-start fw-semibold"><svg class="d-none d-lg-inline"
+                        <h3 class=" d-flex gap-2 fs-6 text-lg-start fw-semibold"><svg class="d-none d-md-inline"
                                 fill="currentColor" aria-hidden="true" viewBox="0 0 32 32" width="24" height="24">
                                 <path
                                     d="M6 5.333h9.333a3.333 3.333 0 0 1 0 6.667H6a3.333 3.333 0 0 1 0-6.667Zm9.333 4a.667.667 0 0 0 0-1.333H6a.667.667 0 0 0 0 1.333h9.333Zm-6.666 4H18A3.333 3.333 0 1 1 18 20H8.667a3.333 3.333 0 0 1 0-6.667Zm9.333 4A.667.667 0 0 0 18 16H8.667a.667.667 0 0 0 0 1.333H18Zm6.667 4h-9.334a3.333 3.333 0 1 0 0 6.667h9.334a3.333 3.333 0 0 0 0-6.667Zm-9.334 4a.667.667 0 0 1 0-1.333h9.334a.667.667 0 1 1 0 1.333h-9.334Zm8-20H26A3.333 3.333 0 1 1 26 12h-2.667a3.333 3.333 0 1 1 0-6.667Zm2.667 4A.667.667 0 1 0 26 8h-2.667a.667.667 0 1 0 0 1.333H26Z">
@@ -404,7 +405,7 @@
                 class="row card flex-lg-row flex-column-reverse justify-content-between align-items-center p-3 p-lg-5 row-gap-4">
                 <div class="col-12 col-lg-6">
                     <h3 class=" d-flex gap-2 align-items-center fs-6 fw-semibold ">
-                        <svg class="d-none d-lg-inline" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"
+                        <svg class="d-none d-md-inline" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"
                             width="24" height="24">
                             <path
                                 d="M6.66 6.667h18.68A2.66 2.66 0 0 1 28 9.325v16.016A2.659 2.659 0 0 1 25.34 28H6.66A2.66 2.66 0 0 1 4 25.341V9.325a2.659 2.659 0 0 1 2.66-2.658ZM6.667 12v12A1.333 1.333 0 0 0 8 25.333h16A1.333 1.333 0 0 0 25.333 24V12H6.667ZM8 5.333a1.333 1.333 0 0 1 2.667 0v1.334H8V5.333Zm13.333 0a1.333 1.333 0 0 1 2.667 0v1.334h-2.667V5.333Zm-12 12v-2.668H12v2.668H9.333Zm10.667 0v-2.668h2.667v2.668H20Zm-5.333 0v-2.668h2.668v2.668h-2.668Zm-5.334 5.334V20H12v2.667H9.333Zm5.334 0V20h2.668v2.667h-2.668Zm5.333 0V20h2.667v2.667H20Z">
@@ -441,27 +442,22 @@
                 </div>
             </div>
             <div class="row py-5">
-                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
-                    <div class="card p-3 p-sm-4 rounded-2">
-                        <div class="d-flex flex-column align-item-center justify-content-between text-left gap-3">
-                            <div class="image-wrapper">
-                                <img src="/assets/images/Integrations_Puzzle.svg" alt="Integreation">
-                            </div>
-                            <h4 class="fw-semi-bold ">Integreations</h4>
-                            <p class="">
-                                Connect the apps your team already uses into
-                                your Trello workflow or add a Power-Up to
-                                fine-tune your specific needs.
-                            </p>
+                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 d-flex">
+                    <div class="card p-3 p-sm-4 rounded-2 d-flex flex-column justify-content-between gap-3">
+                        <div class="image-wrapper">
+                            <img src="/assets/images/Integrations_Puzzle.svg" alt="Integreation">
                         </div>
-                        <div class=" d-flex align-items-end">
-                            <a class="btn btn-seceondary mt-4">Browse Integreations</a>
+                        <h4 class="fw-semi-bold">Integreations</h4>
+                        <p class="">Connect the apps your team already uses into
+                            your Trello workflow or add a Power-Up to
+                            fine-tune your specific needs.</p>
+                        <div class="d-flex align-items-end pt-4">
+                            <a class="btn btn-seceondary mt-auto">Browse Integreations</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
-                    <div class="card p-3 p-sm-4 rounded-2">
-                        <div class="d-flex flex-column align-item-center justify-content-between gap-3">
+                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4  d-flex">
+                    <div class="card p-3 p-sm-4 rounded-2 d-flex flex-column align-item-center justify-content-between gap-3">
                             <div class="image-wrapper">
                                 <img src="/assets/images/automation-feature.svg" alt="">
                             </div>
@@ -470,23 +466,22 @@
                                 No-code automation is built into every Trello board.
                                 Focus on the work that matters most and let the robots do the rest.
                             </p>
-                        </div>
+                        
                         <div class="d-flex align-items-end pt-4">
                             <a class="btn btn-seceondary">Get to Know Automation</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 ">
-                    <div class="card p-3 p-sm-4 rounded-2">
-                        <div class="d-flex flex-column align-item-center justify-content-between gap-3">
-                            <div class="image-wrapper">
+                <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4  d-flex ">
+                    <div class="card p-3 p-sm-4 rounded-2 d-flex flex-column align-item-center justify-content-between gap-3">
+                        <div class="image-wrapper">
                                 <img src="/assets/images/Search-feature.svg" alt="">
                             </div>
                             <h4 class="">Trello Enterprise</h4>
                             <p class="">
                                 The productivity tool
                                 teams love, paired with the features and security needed for scale. </p>
-                        </div>
+                        
                         <div class=" d-flex align-items-end pt-4">
                             <a class="btn btn-seceondary">Explore Enterprise</a>
                         </div>
@@ -639,8 +634,8 @@
                     <div class="card card-wrapper justify-content-between h-100 rounded-0 ">
                         <div class="card-header bg-transparent border-0 p-0 ">
                             <h6 class="fw-semibold">Free</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-1"> 0 </span> USD</h4>
-                            <h6 class="fw-normal">Free for your whole team</h6>
+                            <h4 class="pt-4 fs-6">$ <span class="fs-48"> 0 </span> USD</h4>
+                            <h6 class=" fs-12 text-grey fw-normal">Free for your whole team</h6>
                         </div>
                         <div class="card-body p-0">
                             <p class="pt-7">For indiviuals or Teams looking to organize any project</p>
@@ -658,8 +653,8 @@
                     <div class="card card-wrapper justify-content-between h-100  rounded-0 ">
                         <div class="card-header bg-transparent border-0 p-0">
                             <h6 class="fw-semibold">Standard</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-1"> 5 </span> USD</h4>
-                            <h6 class="fw-normal">Per user/month if billed annually ($6 billed monthly)</h6>
+                            <h4 class="pt-4 fs-6">$ <span class="fs-48"> 5 </span> USD</h4>
+                            <h6 class="fs-12 text-grey fw-normal">Per user/month if billed annually ($6 billed monthly)</h6>
                         </div>
                         <div class="card-body pt-5 p-0">
                             <p class="">For small teams that need to manage work and scale collaboration.</p>
@@ -675,18 +670,18 @@
                 </div>
                 <!--third card-->
                 <div class="col-12 col-md-6 col-lg-3 px-0">
-                    <div class="card card-wrapper justify-content-between h-100 rounded-0">
+                    <div class="card card-wrapper justify-content-between h-100 rounded-0 blue-border">
                         <div class="card-header bg-transparent border-0 p-0 ">
                             <h6 class="fw-semibold">Premium</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-1"> 10 </span> USD</h4>
-                            <h6 class="fw-normal">Per user/month if billed annually ($12.50 billed monthly)</h6>
+                            <h4 class="pt-4 fs-6">$ <span class="fs-48"> 10 </span> USD</h4>
+                            <h6 class="fs-12 text-grey fw-normal">Per user/month if billed annually ($12.50 billed monthly)</h6>
                         </div>
                         <div class="card-body pt-5 p-0">
                             <p class="">For teams that need to track and visualize multiple projects in several
                                 ways, including boards, timelines, calendars, etc.</p>
                         </div>
                         <div class="card-button mt-5 mt-lg-3">
-                            <a href="" class="btn btn-seceondary ">Try for free</a>
+                            <a href="" class="btn btn-seceondary bg-lightblue ">Try for free</a>
                         </div>
                         <div class="mt-4">
                             <a href="" class="">Learn more about Premium</a>
@@ -698,8 +693,8 @@
                     <div class="card card-wrapper justify-content-between h-100 rounded-0 ">
                         <div class="card-header bg-transparent border-0 p-0">
                             <h6 class="fw-semibold">Enterprise</h6>
-                            <h4 class="mt-3 fs-6">$ <span class="fs-1 price">17.50</span> USD</h4>
-                            <h6 class="fw-normal">Per user/month - billed annually ($210.00 annual price per user)</h6>
+                            <h4 class=" pt-4 fs-6">$ <span class="fs-48 price">17.50</span> USD</h4>
+                            <h6 class="fs-12 text-grey fw-normal">Per user/month - billed annually ($210.00 annual price per user)</h6>
                         </div>
                         <div class="card-body pt-5 p-0">
                             <p class="">For organizations that need to connect work across teams with more
