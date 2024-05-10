@@ -61,6 +61,7 @@ p {
     padding-top: 70px;
 }
 
+
 /*Headings*/
 h1 {
     font-size: 48px;
@@ -97,9 +98,10 @@ h6 {
     font-size: 12px;
 }
 
-.fs-48{
+.fs-48 {
     font-size: 48px;
 }
+
 .fw-500 {
     font-weight: 500;
 }
@@ -109,12 +111,14 @@ h6 {
     background: #DEEBFF;
 }
 
-.text-grey{
+.text-grey {
     color: #505F79;
 }
-.text-lightgray{
+
+.text-lightgray {
     color: lightgray;
 }
+
 .navbar.scrolled {
     transition: 0.2s ease-out;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
@@ -149,7 +153,7 @@ h6 {
 /*productivity section*/
 
 .productivity-section {
-    background:linear-gradient(white, lightcyan);
+    background: linear-gradient(white, lightcyan);
 
 }
 
@@ -164,7 +168,7 @@ h6 {
 .productivity-section .box.active {
     background: rgb(255, 255, 255);
     color: rgb(9, 30, 66);
-    border-left-color:  rgb(0, 199, 229);
+    border-left-color: rgb(0, 199, 229);
     box-shadow: rgba(9, 30, 66, 0.15) 0px 13px 16px 0px;
 }
 
@@ -355,7 +359,7 @@ h6 {
     width: 37px;
     height: 38px;
     background-color: #F4F4F4;
- 
+
     border-radius: 100%;
 }
 
@@ -380,9 +384,10 @@ h6 {
     padding: 30px;
 }
 
-.blue-border{
+.blue-border {
     border: 2px solid #2684FF;
 }
+
 .price-cards-section input {
     width: 100%;
     border: none;
